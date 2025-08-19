@@ -17,6 +17,7 @@ from src.preprocessing.enhanced_image_processor import EnhancedImageProcessor
 from src.ocr.ocr_engine import OCREngine
 from src.extraction.data_extractor import DataExtractor
 from src.extraction.ml_enhanced_extractor import MLEnhancedExtractor
+from src.extraction.llm_enhanced_extractor import LLMEnhancedExtractor
 from src.utils.logger import app_logger
 from src.utils.exceptions import *
 
@@ -29,6 +30,7 @@ image_processor = EnhancedImageProcessor()
 ocr_engine = OCREngine()
 data_extractor = DataExtractor()
 ml_extractor = MLEnhancedExtractor()
+llm_extractor = LLMEnhancedExtractor()
 
 
 @router.post(
@@ -82,8 +84,8 @@ async def process_invoice(
             language=processing_options.language
         )
         
-        # Extraction des données de facture avec ML amélioré
-        invoice_data = ml_extractor.extract_invoice_data_with_ml(
+        # Extraction des données de facture avec LLM amélioré (sans valeurs null)
+        invoice_data = llm_extractor.extract_invoice_data_with_llm(
             ocr_result.text,
             structured_data,
             file.filename

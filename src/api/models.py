@@ -46,6 +46,14 @@ class Invoice(BaseModel):
     due_date: Optional[date] = None
     currency: Optional[str] = "EUR"
     payment_terms: Optional[str] = None
+    
+    class Config:
+        # Configuration pour accepter les dates
+        json_encoders = {
+            date: lambda v: v.isoformat() if v else None
+        }
+        # Permettre l'assignation par nom de champ
+        populate_by_name = True
 
 
 class LineItem(BaseModel):

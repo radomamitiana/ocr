@@ -76,6 +76,7 @@ def insert_supplier_data():
     """Insère les fournisseurs dans la table supplier"""
     db = next(get_db())
     
+    # Données réalistes pour les suppliers basés à Nyon, Suisse
     suppliers = [
         {
             'social_reason': 'YAPI Electromécanique SA',
@@ -83,8 +84,8 @@ def insert_supplier_data():
             'address': 'Rue de la Gare 12, 1260 Nyon, Suisse',
             'email': 'contact@yapi-electro.ch',
             'phone_number': '+41 22 361 12 34',
-            'contact_name': 'Jean Dupont',
-            'goals': [1, 2, 3]  # Objectifs exemple
+            'contact_name': 'Jean-Pierre Müller',
+            'goals': [1001, 1002, 1003]  # Objectifs techniques électromécaniques
         },
         {
             'social_reason': 'STS Soudure - Tuyauterie - Service',
@@ -93,7 +94,7 @@ def insert_supplier_data():
             'email': 'info@sts-nyon.ch',
             'phone_number': '+41 22 361 45 67',
             'contact_name': 'Pierre Martin',
-            'goals': [2, 4]
+            'goals': [2001, 2002]  # Objectifs soudure et tuyauterie
         },
         {
             'social_reason': 'SI NYON',
@@ -102,16 +103,16 @@ def insert_supplier_data():
             'email': 'services@nyon.ch',
             'phone_number': '+41 22 316 40 40',
             'contact_name': 'Marie Leroy',
-            'goals': [1, 3, 5]
+            'goals': [3001, 3002, 3003]  # Objectifs services publics
         },
         {
-            'social_reason': 'Romande Energie SA',
+            'social_reason': 'Romande Energie Nyon',
             'rcs': 'CHE-567.890.123',
-            'address': 'Rue de Lausanne 53, 1110 Morges, Suisse',
-            'email': 'contact@romande-energie.ch',
-            'phone_number': '+41 21 802 95 95',
+            'address': 'Rue de Lausanne 53, 1260 Nyon, Suisse',
+            'email': 'nyon@romande-energie.ch',
+            'phone_number': '+41 22 316 95 95',
             'contact_name': 'Laurent Blanc',
-            'goals': [1, 2]
+            'goals': [4001, 4002]  # Objectifs énergie
         }
     ]
     
@@ -192,12 +193,35 @@ def verify_data():
             print(f"  - {company[1]} (ERP: {company[2]}, ID: {company[0]})")
         
         # Vérifier les fournisseurs
-        supplier_query = text("SELECT id, social_reason, email FROM supplier")
+        supplier_query = text("SELECT id, social_reason, email, contact_name FROM supplier")
         suppliers = db.execute(supplier_query).fetchall()
         
         print("\n=== Fournisseurs dans la base ===")
         for supplier in suppliers:
-            print(f"  - {supplier[1]} ({supplier[2]}, ID: {supplier[0]})")
+            print(f"  - {supplier[1]} ({supplier[2]}, Contact: {supplier[3]}, ID: {supplier[0]})")
+        
+        # Vérifier les champs non-null
+        print("\n=== Vérification des champs obligatoires ===")
+        
+        # Vérifier company
+        null_check_company = text("""
+            SELECT COUNT(*) as total,
+                   COUNT(erp_code) as erp_count,
+                   COUNT(name) as name_count
+            FROM company
+        """)
+        company_stats = db.execute(null_check_company).fetchone()
+        print(f"Company - Total: {company_stats[0]}, ERP codes: {company_stats[1]}, Names: {company_stats[2]}")
+        
+        # Vérifier supplier
+        null_check_supplier = text("""
+            SELECT COUNT(*) as total,
+                   COUNT(social_reason) as reason_count,
+                   COUNT(is_active) as active_count
+            FROM supplier
+        """)
+        supplier_stats = db.execute(null_check_supplier).fetchone()
+        print(f"Supplier - Total: {supplier_stats[0]}, Social reasons: {supplier_stats[1]}, Active flags: {supplier_stats[2]}")
             
     except Exception as e:
         print(f"❌ Erreur lors de la vérification: {str(e)}")

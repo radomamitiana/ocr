@@ -57,6 +57,15 @@ class InvoiceService:
             invoice_goals = self._create_invoice_goals_dto_only_enhanced(invoice_id, extracted_data, including_taxes)
             
             # Construction du DTO de réponse
+            app_logger.info(f"Création DTO avec les valeurs:")
+            app_logger.info(f"  - invoice_number: {invoice_number}")
+            app_logger.info(f"  - invoice_date: {invoice_date}")
+            app_logger.info(f"  - company_erp_code: {company_erp_code}")
+            app_logger.info(f"  - supplier_name: {supplier_name}")
+            app_logger.info(f"  - including_taxes: {including_taxes}")
+            app_logger.info(f"  - vat: {vat}")
+            app_logger.info(f"  - currency_code: {currency_code}")
+            
             invoice_dto = InvoiceDTO(
                 id=invoice_id,
                 invoice_number=invoice_number,
@@ -76,6 +85,9 @@ class InvoiceService:
             )
             
             app_logger.info(f"DTO Invoice créé avec succès - ID: {invoice_id}")
+            app_logger.info(f"DTO après création - invoice_number: {invoice_dto.invoice_number}")
+            app_logger.info(f"DTO après création - company_erp_code: {invoice_dto.company_erp_code}")
+            app_logger.info(f"DTO après création - supplier_name: {invoice_dto.supplier_name}")
             return invoice_dto
             
         except Exception as e:
@@ -83,20 +95,25 @@ class InvoiceService:
             raise
     
     def _extract_invoice_number(self, data: InvoiceData) -> Optional[str]:
-        """Extrait le numéro de facture"""
-        if data.invoice and data.invoice.number:
+        """Extrait le numéro de facture du LLM"""
+        if data.invoice and data.invoice.number and data.invoice.number != 'INV-UNKNOWN':
+            app_logger.info(f"Numéro de facture LLM extrait: {data.invoice.number}")
             return data.invoice.number
         return None
     
     def _extract_invoice_date(self, data: InvoiceData) -> Optional[date]:
-        """Extrait la date de facture"""
+        """Extrait la date de facture du LLM"""
         if data.invoice and data.invoice.date:
             if isinstance(data.invoice.date, str):
                 try:
-                    return datetime.strptime(data.invoice.date, "%Y-%m-%d").date()
+                    parsed_date = datetime.strptime(data.invoice.date, "%Y-%m-%d").date()
+                    app_logger.info(f"Date de facture LLM extraite: {parsed_date}")
+                    return parsed_date
                 except ValueError:
                     return None
-            return data.invoice.date
+            elif isinstance(data.invoice.date, date):
+                app_logger.info(f"Date de facture LLM extraite: {data.invoice.date}")
+                return data.invoice.date
         return None
     
     def _find_or_create_company(self, data: InvoiceData) -> Optional[str]:
@@ -230,65 +247,117 @@ class InvoiceService:
         return invoice_goals
     
     def _extract_invoice_number_enhanced(self, data: InvoiceData, db_data: Optional[dict]) -> Optional[str]:
-        """Extrait le numéro de facture avec priorité aux données BDD"""
+        """Extrait le numéro de facture avec priorité aux données LLM"""
+        # Priorité aux données LLM (plus fiables)
+        llm_number = self._extract_invoice_number(data)
+        if llm_number and llm_number != 'INV-UNKNOWN':
+            app_logger.info(f"Numéro de facture LLM utilisé: {llm_number}")
+            return llm_number
+        
+        # Fallback sur données Swiss extractor si LLM n'a rien trouvé
         if db_data and db_data.get('invoice_number'):
+            app_logger.info(f"Numéro de facture Swiss utilisé: {db_data['invoice_number']}")
             return db_data['invoice_number']
-        return self._extract_invoice_number(data)
+        
+        app_logger.warning("Aucun numéro de facture trouvé")
+        return "INV-DEFAULT"
     
     def _extract_invoice_date_enhanced(self, data: InvoiceData, db_data: Optional[dict]) -> Optional[date]:
-        """Extrait la date de facture avec priorité aux données BDD"""
+        """Extrait la date de facture avec priorité aux données LLM"""
+        # Priorité aux données LLM (plus fiables)
+        llm_date = self._extract_invoice_date(data)
+        if llm_date:
+            return llm_date
+        
+        # Fallback sur données Swiss extractor
         if db_data and db_data.get('invoice_date'):
             return db_data['invoice_date']
-        return self._extract_invoice_date(data)
+        
+        return llm_date
     
     def _extract_supplier_name_enhanced(self, data: InvoiceData, db_data: Optional[dict]) -> Optional[str]:
-        """Extrait le nom du fournisseur avec priorité aux données BDD"""
+        """Extrait le nom du fournisseur avec priorité aux données LLM"""
+        # Priorité aux données LLM (plus fiables)
+        llm_supplier = self._extract_supplier_name(data)
+        if llm_supplier and llm_supplier != 'Fournisseur Inconnu':
+            app_logger.info(f"Fournisseur LLM utilisé: {llm_supplier}")
+            return llm_supplier
+        
+        # Fallback sur données Swiss extractor
         if db_data and db_data.get('supplier_name'):
+            app_logger.info(f"Fournisseur Swiss utilisé: {db_data['supplier_name']}")
             return db_data['supplier_name']
-        return self._extract_supplier_name(data)
+        
+        app_logger.warning("Aucun fournisseur trouvé")
+        return "Fournisseur Inconnu"
     
     def _extract_company_enhanced(self, data: InvoiceData, db_data: Optional[dict]) -> Optional[str]:
-        """Extrait le code ERP de la société avec priorité aux données BDD"""
-        if db_data and db_data.get('company_erp_code'):
-            return db_data['company_erp_code']
-        
-        # Fallback sur les données extraites
-        if data.customer and data.customer.name:
+        """Extrait le code ERP de la société avec priorité aux données LLM"""
+        # Priorité aux données LLM (plus fiables)
+        if data.customer and data.customer.name and data.customer.name != 'Société Inconnue':
+            app_logger.info(f"Société LLM utilisée: {data.customer.name}")
             return data.customer.name
         
-        return None
+        # Fallback sur données Swiss extractor
+        if db_data and db_data.get('company_erp_code'):
+            app_logger.info(f"Société Swiss utilisée: {db_data['company_erp_code']}")
+            return db_data['company_erp_code']
+        
+        # Société par défaut
+        app_logger.info("Société par défaut utilisée: SITSE")
+        return "SITSE"
     
     def _extract_currency_enhanced(self, data: InvoiceData, db_data: Optional[dict]) -> str:
-        """Extrait le code de devise avec priorité aux données BDD"""
-        if db_data and db_data.get('currency_code'):
-            return db_data['currency_code']
-        
-        # Fallback sur les données extraites
+        """Extrait le code de devise avec priorité aux données LLM"""
+        # Priorité aux données LLM (plus fiables)
         if data.invoice and data.invoice.currency:
             return data.invoice.currency
         
-        return "EUR"  # Par défaut
+        # Fallback sur données Swiss extractor
+        if db_data and db_data.get('currency_code'):
+            return db_data['currency_code']
+        
+        return "CHF"  # Par défaut pour la Suisse
     
     def _extract_amounts_enhanced(self, data: InvoiceData, db_data: Optional[dict]) -> tuple[Optional[Decimal], Optional[Decimal], Optional[Decimal]]:
-        """Extrait les montants avec priorité aux données BDD"""
+        """Extrait les montants avec priorité aux données LLM"""
         excluding_taxes = None
         vat = None
         including_taxes = None
         
-        # Priorité aux données BDD
+        # Priorité aux données LLM (plus fiables)
+        if data.totals:
+            excluding_taxes = self._extract_excluding_taxes(data)
+            vat = self._extract_vat(data)
+            including_taxes = self._extract_including_taxes(data)
+            
+            if excluding_taxes:
+                app_logger.info(f"Montant HT LLM utilisé: {excluding_taxes}")
+            if vat:
+                app_logger.info(f"TVA LLM utilisée: {vat}")
+            if including_taxes:
+                app_logger.info(f"Montant TTC LLM utilisé: {including_taxes}")
+        
+        # Fallback sur données Swiss extractor si LLM n'a rien trouvé
         if db_data and db_data.get('amounts'):
             amounts = db_data['amounts']
-            excluding_taxes = amounts.get('total_ht')
-            vat = amounts.get('tva')
-            including_taxes = amounts.get('total_ttc')
+            if not excluding_taxes and amounts.get('total_ht'):
+                excluding_taxes = amounts.get('total_ht')
+                app_logger.info(f"Montant HT Swiss utilisé: {excluding_taxes}")
+            if not vat and amounts.get('tva'):
+                vat = amounts.get('tva')
+                app_logger.info(f"TVA Swiss utilisée: {vat}")
+            if not including_taxes and amounts.get('total_ttc'):
+                including_taxes = amounts.get('total_ttc')
+                app_logger.info(f"Montant TTC Swiss utilisé: {including_taxes}")
         
-        # Fallback sur les données extraites si pas trouvé
+        # Valeurs par défaut si rien trouvé
         if not excluding_taxes:
-            excluding_taxes = self._extract_excluding_taxes(data)
+            excluding_taxes = Decimal('0.00')
         if not vat:
-            vat = self._extract_vat(data)
+            vat = Decimal('0.00')
         if not including_taxes:
-            including_taxes = self._extract_including_taxes(data)
+            including_taxes = Decimal('0.00')
         
         return excluding_taxes, vat, including_taxes
     

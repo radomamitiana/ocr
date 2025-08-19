@@ -1,0 +1,144 @@
+[
+  {
+    "file": "20250304163636929.pdf",
+    "status": "success",
+    "processing_time": 3.9072470664978027,
+    "data": {
+      "status": "success",
+      "processing_time": 3.89306902885437,
+      "invoice": {
+        "id": "b24ee51b-4ef9-48c9-9b62-3bf3b4291944",
+        "invoiceNumber": "110009850987ROMANDE1",
+        "invoiceDate": "2025-02-17",
+        "companyErpCode": "SITSE",
+        "supplierName": "Romande Energie SA",
+        "excludingTaxes": "1722.38",
+        "vat": "136.35",
+        "includingTaxes": "1858.73",
+        "paymentState": "DRAFT",
+        "currencyCode": "CHF",
+        "completed": false,
+        "draft": true,
+        "stateValidations": [],
+        "invoiceGoals": [
+          {
+            "id": "c12d7a7a-ce1f-4343-a8b8-0e6655d9fd80",
+            "goalId": null,
+            "postId": null,
+            "goalAccountNumber": null,
+            "postAccountNumber": null,
+            "amount": "1858.73",
+            "invoiceId": "b24ee51b-4ef9-48c9-9b62-3bf3b4291944"
+          }
+        ],
+        "documentUrls": [
+          "20250304163636929.pdf"
+        ]
+      }
+    }
+  },
+  {
+    "file": "20250304163709949.pdf",
+    "status": "success",
+    "processing_time": 4.6112892627716064,
+    "data": {
+      "status": "success",
+      "processing_time": 4.598728895187378,
+      "invoice": {
+        "id": "5a063e32-2177-4b02-9a5d-47b941927cd5",
+        "invoiceNumber": "1688218INYON",
+        "invoiceDate": "2025-01-31",
+        "companyErpCode": "SITSE",
+        "supplierName": "SI NYON",
+        "excludingTaxes": "0.00",
+        "vat": "0.00",
+        "includingTaxes": "12671.55",
+        "paymentState": "DRAFT",
+        "currencyCode": "CHF",
+        "completed": false,
+        "draft": true,
+        "stateValidations": [],
+        "invoiceGoals": [
+          {
+            "id": "17f4d3a4-a54c-4b15-966b-8c9f2311ca8a",
+            "goalId": null,
+            "postId": null,
+            "goalAccountNumber": null,
+            "postAccountNumber": null,
+            "amount": "12671.55",
+            "invoiceId": "5a063e32-2177-4b02-9a5d-47b941927cd5"
+          }
+        ],
+        "documentUrls": [
+          "20250304163709949.pdf"
+        ]
+      }
+    }
+  },
+  {
+    "file": "20250304163810596.pdf",
+    "status": "success",
+    "processing_time": 3.1445393562316895,
+    "data": {
+      "status": "success",
+      "processing_time": 3.105257987976074,
+      "invoice": {
+        "id": "402a6a36-7a7a-4ba3-a241-7d877846c9f9",
+        "invoiceNumber": "etsansd",
+        "invoiceDate": "2025-02-10",
+        "companyErpCode": "SITSE",
+        "supplierName": "YAPI Electromécanique SA",
+        "excludingTaxes": "-141.5609",
+        "vat": "141.75",
+        "includingTaxes": "0.1891",
+        "paymentState": "DRAFT",
+        "currencyCode": "CHF",
+        "completed": false,
+        "draft": true,
+        "stateValidations": [],
+        "invoiceGoals": [
+          {
+            "id": "1610d3ae-fffd-43bb-a65a-ccfa57c924c7",
+            "goalId": null,
+            "postId": null,
+            "goalAccountNumber": null,
+            "postAccountNumber": null,
+            "amount": "0.1891",
+            "invoiceId": "402a6a36-7a7a-4ba3-a241-7d877846c9f9"
+          }
+        ],
+        "documentUrls": [
+          "20250304163810596.pdf"
+        ]
+      }
+    }
+  },
+  {
+    "file": "20250304164049944.pdf",
+    "status": "success",
+    "processing_time": 4.282356023788452,
+    "data": {
+      "status": "success",
+      "processing_time": 4.2660088539123535,
+      "invoice": {
+        "id": "53879afb-2ff5-4e4b-a43a-d05be04fca5b",
+        "invoiceNumber": "24044Penthaz",
+        "invoiceDate": "2024-04-26",
+        "companyErpCode": "SITSE",
+        "supplierName": "STS Soudure - Tuyauterie - Service",
+        "excludingTaxes": "0.00",
+        "vat": "8.1",
+        "includingTaxes": "0.00",
+        "paymentState": "DRAFT",
+        "currencyCode": "CHF",
+        "completed": false,
+        "draft": true,
+        "stateValidations": [],
+        "invoiceGoals": [],
+        "documentUrls": [
+          "20250304164049944.pdf"
+        ]
+      }
+    }
+  }
+]

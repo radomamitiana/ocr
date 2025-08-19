@@ -31,7 +31,8 @@ class StateValidationDTO(BaseModel):
     state: Optional[bool] = None
 
     class Config:
-        allow_population_by_field_name = True
+        populate_by_name = True
+        allow_population_by_field_name = True  # Backward compatibility
 
 
 class InvoiceGoalDTO(BaseModel):
@@ -45,7 +46,8 @@ class InvoiceGoalDTO(BaseModel):
     invoice_id: Optional[UUID] = Field(None, alias="invoiceId")
 
     class Config:
-        allow_population_by_field_name = True
+        populate_by_name = True
+        allow_population_by_field_name = True  # Backward compatibility
 
 
 class InvoiceDTO(BaseModel):
@@ -67,7 +69,8 @@ class InvoiceDTO(BaseModel):
     document_urls: List[str] = Field(default_factory=list, alias="documentUrls")
 
     class Config:
-        allow_population_by_field_name = True
+        populate_by_name = True
+        allow_population_by_field_name = True  # Backward compatibility
         use_enum_values = True
 
 
