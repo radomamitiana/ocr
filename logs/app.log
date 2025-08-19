@@ -1,0 +1,1662 @@
+2025-08-19 14:24:21 | INFO     | src.ocr.ocr_engine:_validate_tesseract:55 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 14:24:21 | INFO     | src.main:lifespan:23 - Démarrage de l'application OCR Factures
+2025-08-19 14:24:21 | INFO     | src.main:lifespan:24 - Version: 1.0.0
+2025-08-19 14:24:21 | INFO     | src.main:lifespan:25 - Mode debug: False
+2025-08-19 14:24:35 | ERROR    | src.main:general_exception_handler:105 - Erreur non gérée: name 'time' is not defined
+2025-08-19 14:25:16 | INFO     | src.main:lifespan:30 - Arrêt de l'application OCR Factures
+2025-08-19 14:25:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:55 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 14:25:17 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 14:25:17 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 14:25:17 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 14:25:39 | INFO     | src.main:log_requests:124 - Requête: GET http://localhost:8000/api/v1/health
+2025-08-19 14:25:39 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 0.00s
+2025-08-19 14:45:12 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 14:45:12 | ERROR    | src.main:validation_exception_handler:63 - Erreur de validation: [{'type': 'missing', 'loc': ('body', 'file'), 'msg': 'Field required', 'input': None, 'url': 'https://errors.pydantic.dev/2.5/v/missing'}]
+2025-08-19 14:45:12 | INFO     | src.main:log_requests:131 - Réponse: 422 - Temps de traitement: 0.01s
+2025-08-19 14:45:22 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 14:45:22 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 14:45:22 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmprqz2rg2i.pdf
+2025-08-19 14:45:22 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmprqz2rg2i.pdf
+2025-08-19 14:45:22 | ERROR    | src.processors.pdf_processor:process:70 - Erreur lors de la conversion PDF: Unable to get page count. Is poppler installed and in PATH?
+2025-08-19 14:45:22 | ERROR    | src.preprocessing.enhanced_image_processor:process_file:162 - Erreur lors du traitement du fichier: Impossible de convertir le PDF: Unable to get page count. Is poppler installed and in PATH?
+2025-08-19 14:45:22 | ERROR    | src.api.routes:process_invoice:147 - Erreur interne: Impossible de traiter le fichier: Impossible de convertir le PDF: Unable to get page count. Is poppler installed and in PATH?
+2025-08-19 14:45:22 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 500: {'status': 'error', 'error_code': 'INTERNAL_ERROR', 'message': 'Erreur interne du serveur', 'details': {'error': 'Impossible de traiter le fichier: Impossible de convertir le PDF: Unable to get page count. Is poppler installed and in PATH?'}}
+2025-08-19 14:45:22 | INFO     | src.main:log_requests:131 - Réponse: 500 - Temps de traitement: 0.02s
+2025-08-19 14:49:17 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 14:49:19 | INFO     | src.ocr.ocr_engine:_validate_tesseract:55 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 14:49:19 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 14:49:19 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 14:49:19 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 14:49:35 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 14:49:37 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 14:49:37 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 14:49:37 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 14:49:37 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 14:49:37 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 14:49:42 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /usr/bin/tesseract
+2025-08-19 14:49:42 | ERROR    | src.ocr.ocr_engine:_validate_tesseract:61 - Chemin tesseract utilisé: /usr/bin/tesseract
+2025-08-19 14:50:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 14:50:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 14:50:17 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 14:50:17 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 14:50:17 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 14:50:17 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 14:50:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 14:50:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 14:50:31 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 14:50:31 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 14:50:31 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 14:51:09 | INFO     | src.main:log_requests:124 - Requête: GET http://localhost:8000/api/v1/health
+2025-08-19 14:51:09 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 0.00s
+2025-08-19 14:51:11 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 14:51:11 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 14:51:11 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp01o2czj2.pdf
+2025-08-19 14:51:11 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp01o2czj2.pdf
+2025-08-19 14:51:12 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 14:51:12 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 14:51:12 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 14:51:12 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 14:51:12 | ERROR    | src.ocr.ocr_engine:extract_text:121 - Erreur lors de l'extraction OCR: No closing quotation
+2025-08-19 14:51:12 | ERROR    | src.api.routes:process_invoice:135 - Erreur de traitement: Échec de l'extraction OCR: No closing quotation
+2025-08-19 14:51:12 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 422: {'status': 'error', 'error_code': 'PROCESSING_ERROR', 'message': "Impossible d'extraire les données de la facture", 'details': {'error': "Échec de l'extraction OCR: No closing quotation"}}
+2025-08-19 14:51:12 | INFO     | src.main:log_requests:131 - Réponse: 422 - Temps de traitement: 1.03s
+2025-08-19 14:52:51 | INFO     | src.main:log_requests:124 - Requête: GET http://localhost:8000/health
+2025-08-19 14:52:51 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 404: Not Found
+2025-08-19 14:52:51 | INFO     | src.main:log_requests:131 - Réponse: 404 - Temps de traitement: 0.00s
+2025-08-19 14:53:00 | INFO     | src.main:log_requests:124 - Requête: GET http://localhost:8000/api/v1/health
+2025-08-19 14:53:00 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 0.00s
+2025-08-19 14:53:34 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 14:53:34 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 14:53:34 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpbrgmvzld.pdf
+2025-08-19 14:53:34 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpbrgmvzld.pdf
+2025-08-19 14:53:34 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 14:53:34 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 14:53:34 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 14:53:34 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 14:53:34 | ERROR    | src.ocr.ocr_engine:extract_text:121 - Erreur lors de l'extraction OCR: No closing quotation
+2025-08-19 14:53:34 | ERROR    | src.api.routes:process_invoice:135 - Erreur de traitement: Échec de l'extraction OCR: No closing quotation
+2025-08-19 14:53:34 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 422: {'status': 'error', 'error_code': 'PROCESSING_ERROR', 'message': "Impossible d'extraire les données de la facture", 'details': {'error': "Échec de l'extraction OCR: No closing quotation"}}
+2025-08-19 14:53:34 | INFO     | src.main:log_requests:131 - Réponse: 422 - Temps de traitement: 0.84s
+2025-08-19 14:53:46 | INFO     | src.main:log_requests:124 - Requête: GET http://localhost:8000/api/v1/health
+2025-08-19 14:53:46 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 0.00s
+2025-08-19 14:55:01 | INFO     | src.main:log_requests:124 - Requête: GET http://localhost:8000/api/v1/health
+2025-08-19 14:55:01 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 0.00s
+2025-08-19 14:55:16 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 14:55:16 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 14:55:16 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpuuqri0fg.pdf
+2025-08-19 14:55:16 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpuuqri0fg.pdf
+2025-08-19 14:55:16 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 14:55:16 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 14:55:16 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 14:55:16 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 14:55:16 | ERROR    | src.ocr.ocr_engine:extract_text:121 - Erreur lors de l'extraction OCR: No closing quotation
+2025-08-19 14:55:16 | ERROR    | src.api.routes:process_invoice:135 - Erreur de traitement: Échec de l'extraction OCR: No closing quotation
+2025-08-19 14:55:16 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 422: {'status': 'error', 'error_code': 'PROCESSING_ERROR', 'message': "Impossible d'extraire les données de la facture", 'details': {'error': "Échec de l'extraction OCR: No closing quotation"}}
+2025-08-19 14:55:16 | INFO     | src.main:log_requests:131 - Réponse: 422 - Temps de traitement: 0.80s
+2025-08-19 14:58:51 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 14:58:51 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 14:58:51 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 14:58:51 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 14:58:51 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 14:59:05 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 14:59:05 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 14:59:05 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpv4939qvc.pdf
+2025-08-19 14:59:05 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpv4939qvc.pdf
+2025-08-19 14:59:05 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 14:59:05 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 14:59:06 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 14:59:06 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 14:59:06 | ERROR    | src.ocr.ocr_engine:extract_text:121 - Erreur lors de l'extraction OCR: No closing quotation
+2025-08-19 14:59:06 | ERROR    | src.api.routes:process_invoice:135 - Erreur de traitement: Échec de l'extraction OCR: No closing quotation
+2025-08-19 14:59:06 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 422: {'status': 'error', 'error_code': 'PROCESSING_ERROR', 'message': "Impossible d'extraire les données de la facture", 'details': {'error': "Échec de l'extraction OCR: No closing quotation"}}
+2025-08-19 14:59:06 | INFO     | src.main:log_requests:131 - Réponse: 422 - Temps de traitement: 0.79s
+2025-08-19 14:59:57 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 14:59:58 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 14:59:58 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 14:59:58 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 14:59:58 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 14:59:58 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 14:59:59 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:00:00 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:00:00 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:00:00 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:00:00 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:00:00 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:00:10 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 15:00:10 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 15:00:10 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpggkxba32.pdf
+2025-08-19 15:00:10 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpggkxba32.pdf
+2025-08-19 15:00:10 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 15:00:10 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 15:00:11 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 15:00:11 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 15:00:12 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 15:00:13 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 15:00:13 | ERROR    | src.extraction.data_extractor:extract_invoice_data:138 - Erreur lors de l'extraction: 1 validation error for Invoice
+date
+  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]
+    For further information visit https://errors.pydantic.dev/2.5/v/none_required
+2025-08-19 15:00:13 | ERROR    | src.api.routes:process_invoice:135 - Erreur de traitement: Échec de l'extraction de données: 1 validation error for Invoice
+date
+  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]
+    For further information visit https://errors.pydantic.dev/2.5/v/none_required
+2025-08-19 15:00:13 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 422: {'status': 'error', 'error_code': 'PROCESSING_ERROR', 'message': "Impossible d'extraire les données de la facture", 'details': {'error': "Échec de l'extraction de données: 1 validation error for Invoice\ndate\n  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]\n    For further information visit https://errors.pydantic.dev/2.5/v/none_required"}}
+2025-08-19 15:00:13 | INFO     | src.main:log_requests:131 - Réponse: 422 - Temps de traitement: 2.71s
+2025-08-19 15:00:34 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 15:00:34 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 15:00:34 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpz7wgihnk.pdf
+2025-08-19 15:00:34 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpz7wgihnk.pdf
+2025-08-19 15:00:34 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 15:00:34 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 15:00:35 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 15:00:35 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 15:00:36 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 15:00:37 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 15:00:37 | ERROR    | src.extraction.data_extractor:extract_invoice_data:138 - Erreur lors de l'extraction: 1 validation error for Invoice
+date
+  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]
+    For further information visit https://errors.pydantic.dev/2.5/v/none_required
+2025-08-19 15:00:37 | ERROR    | src.api.routes:process_invoice:135 - Erreur de traitement: Échec de l'extraction de données: 1 validation error for Invoice
+date
+  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]
+    For further information visit https://errors.pydantic.dev/2.5/v/none_required
+2025-08-19 15:00:37 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 422: {'status': 'error', 'error_code': 'PROCESSING_ERROR', 'message': "Impossible d'extraire les données de la facture", 'details': {'error': "Échec de l'extraction de données: 1 validation error for Invoice\ndate\n  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]\n    For further information visit https://errors.pydantic.dev/2.5/v/none_required"}}
+2025-08-19 15:00:37 | INFO     | src.main:log_requests:131 - Réponse: 422 - Temps de traitement: 2.67s
+2025-08-19 15:01:29 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:02:00 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:02:00 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:02:00 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:02:00 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:02:00 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:02:09 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 15:02:09 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 15:02:09 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpy01ulotu.pdf
+2025-08-19 15:02:09 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpy01ulotu.pdf
+2025-08-19 15:02:09 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 15:02:09 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 15:02:10 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 15:02:10 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 15:02:11 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 15:02:12 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 15:02:12 | ERROR    | src.extraction.data_extractor:extract_invoice_data:138 - Erreur lors de l'extraction: 1 validation error for Invoice
+date
+  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]
+    For further information visit https://errors.pydantic.dev/2.5/v/none_required
+2025-08-19 15:02:12 | ERROR    | src.api.routes:process_invoice:135 - Erreur de traitement: Échec de l'extraction de données: 1 validation error for Invoice
+date
+  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]
+    For further information visit https://errors.pydantic.dev/2.5/v/none_required
+2025-08-19 15:02:12 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 422: {'status': 'error', 'error_code': 'PROCESSING_ERROR', 'message': "Impossible d'extraire les données de la facture", 'details': {'error': "Échec de l'extraction de données: 1 validation error for Invoice\ndate\n  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]\n    For further information visit https://errors.pydantic.dev/2.5/v/none_required"}}
+2025-08-19 15:02:12 | INFO     | src.main:log_requests:131 - Réponse: 422 - Temps de traitement: 2.62s
+2025-08-19 15:02:28 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:02:29 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:02:29 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:02:29 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:02:29 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:02:29 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:02:29 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:02:30 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:02:30 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:02:30 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:02:30 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:02:30 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:02:41 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 15:02:41 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 15:02:41 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp93ujo29n.pdf
+2025-08-19 15:02:41 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp93ujo29n.pdf
+2025-08-19 15:02:42 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 15:02:42 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 15:02:42 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 15:02:42 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 15:02:44 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 15:02:44 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 15:02:44 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 15:02:44 | ERROR    | src.api.routes:process_invoice:135 - Erreur de traitement: Champs requis manquants dans la facture
+2025-08-19 15:02:44 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 422: {'status': 'error', 'error_code': 'PROCESSING_ERROR', 'message': "Impossible d'extraire les données de la facture", 'details': {'error': 'Champs requis manquants dans la facture'}}
+2025-08-19 15:02:44 | INFO     | src.main:log_requests:131 - Réponse: 422 - Temps de traitement: 2.67s
+2025-08-19 15:03:06 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:03:07 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:03:07 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:03:07 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:03:07 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:03:07 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:03:08 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:03:09 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:03:09 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:03:09 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:03:09 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:03:09 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:03:19 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 15:03:19 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 15:03:19 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpc5jhb4p8.pdf
+2025-08-19 15:03:19 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpc5jhb4p8.pdf
+2025-08-19 15:03:19 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 15:03:19 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 15:03:20 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 15:03:20 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 15:03:21 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 15:03:22 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 15:03:22 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 15:03:22 | INFO     | src.api.routes:process_invoice:97 - Traitement terminé en 2.67s
+2025-08-19 15:03:22 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 2.67s
+2025-08-19 15:03:34 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 15:03:34 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 15:03:34 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp8w8lk7u3.pdf
+2025-08-19 15:03:34 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp8w8lk7u3.pdf
+2025-08-19 15:03:34 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 15:03:34 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 15:03:35 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 15:03:35 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 15:03:36 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 15:03:37 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 15:03:37 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 15:03:37 | INFO     | src.api.routes:process_invoice:97 - Traitement terminé en 2.74s
+2025-08-19 15:03:37 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 2.74s
+2025-08-19 15:07:35 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:07:37 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:07:37 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:07:37 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:07:37 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:07:37 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:07:57 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:07:58 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:07:58 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:07:58 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:07:58 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:07:58 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:08:16 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:08:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:08:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:08:17 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:08:17 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:08:17 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:08:43 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:08:44 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:08:44 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:08:44 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:08:44 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:08:44 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:09:05 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:09:07 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:09:07 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:09:07 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:09:07 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:09:07 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:09:18 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 15:09:18 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 15:09:18 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp8u00dypf.pdf
+2025-08-19 15:09:18 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp8u00dypf.pdf
+2025-08-19 15:09:18 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 15:09:18 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 15:09:18 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 15:09:18 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 15:09:20 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 15:09:21 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 15:09:21 | ERROR    | src.extraction.data_extractor:extract_invoice_data:138 - Erreur lors de l'extraction: 2 validation errors for Invoice
+date
+  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]
+    For further information visit https://errors.pydantic.dev/2.5/v/none_required
+due_date
+  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]
+    For further information visit https://errors.pydantic.dev/2.5/v/none_required
+2025-08-19 15:09:21 | ERROR    | src.api.routes:process_invoice:135 - Erreur de traitement: Échec de l'extraction de données: 2 validation errors for Invoice
+date
+  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]
+    For further information visit https://errors.pydantic.dev/2.5/v/none_required
+due_date
+  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]
+    For further information visit https://errors.pydantic.dev/2.5/v/none_required
+2025-08-19 15:09:21 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 422: {'status': 'error', 'error_code': 'PROCESSING_ERROR', 'message': "Impossible d'extraire les données de la facture", 'details': {'error': "Échec de l'extraction de données: 2 validation errors for Invoice\ndate\n  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]\n    For further information visit https://errors.pydantic.dev/2.5/v/none_required\ndue_date\n  Input should be None [type=none_required, input_value=datetime.date(2025, 7, 1), input_type=date]\n    For further information visit https://errors.pydantic.dev/2.5/v/none_required"}}
+2025-08-19 15:09:21 | INFO     | src.main:log_requests:131 - Réponse: 422 - Temps de traitement: 2.88s
+2025-08-19 15:09:44 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:09:45 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:09:45 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:09:45 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:09:45 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:09:45 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:09:46 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:09:47 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:09:47 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:09:47 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:09:47 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:09:47 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:09:58 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 15:09:58 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 15:09:58 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp422z34uz.pdf
+2025-08-19 15:09:58 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp422z34uz.pdf
+2025-08-19 15:09:58 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 15:09:58 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 15:09:58 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 15:09:58 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 15:10:00 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 15:10:00 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 15:10:00 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 15:10:00 | INFO     | src.api.routes:process_invoice:97 - Traitement terminé en 2.65s
+2025-08-19 15:10:00 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 2.65s
+2025-08-19 15:10:34 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 15:10:34 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 15:10:34 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpq_f78dul.pdf
+2025-08-19 15:10:34 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpq_f78dul.pdf
+2025-08-19 15:10:34 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 15:10:34 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 15:10:34 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 15:10:34 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 15:10:36 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 15:10:36 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 15:10:36 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 15:10:36 | INFO     | src.api.routes:process_invoice:97 - Traitement terminé en 2.60s
+2025-08-19 15:10:36 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 2.60s
+2025-08-19 15:18:07 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:18:08 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:18:08 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:18:08 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:18:08 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:18:08 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:18:11 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:18:12 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:18:12 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:18:12 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:18:12 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:18:12 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:18:14 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:18:16 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:18:16 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:18:16 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:18:16 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:18:16 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:18:16 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:18:18 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:18:18 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:18:18 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:18:18 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:18:18 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:18:38 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:18:39 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:18:39 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:18:39 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:18:39 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:18:39 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:18:40 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:18:40 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:18:40 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:18:40 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:18:40 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:18:40 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:18:42 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:18:43 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:18:43 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:18:43 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:18:43 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:18:43 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:18:52 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:18:53 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:18:53 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:18:53 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:18:53 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:18:53 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:19:13 | ERROR    | src.database.connection:test_connection:52 - Erreur de connexion à la base de données: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-19 15:20:53 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:20:54 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:20:54 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:20:54 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:20:54 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:20:54 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:21:01 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:21:02 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:21:02 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:21:02 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:21:02 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:21:02 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:21:05 | INFO     | src.database.connection:test_connection:52 - Connexion à la base de données réussie
+2025-08-19 15:21:05 | INFO     | src.database.connection:analyze_database_schema:114 - Analyse de la table invoice
+2025-08-19 15:21:05 | INFO     | src.database.connection:analyze_database_schema:114 - Analyse de la table invoice_goal
+2025-08-19 15:21:05 | INFO     | src.database.connection:analyze_database_schema:114 - Analyse de la table company
+2025-08-19 15:21:05 | INFO     | src.database.connection:analyze_database_schema:114 - Analyse de la table customer
+2025-08-19 15:23:50 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:23:51 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:23:51 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:23:51 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:23:51 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:23:51 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:23:58 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:24:00 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:24:00 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:24:00 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:24:00 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:24:00 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:24:08 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:24:09 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:24:09 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:24:09 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:24:09 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:24:09 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:24:14 | INFO     | src.database.connection:test_connection:52 - Connexion à la base de données réussie
+2025-08-19 15:24:33 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:24:34 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:24:34 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:24:34 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:24:34 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:24:34 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:31:01 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:31:02 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:31:02 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:31:02 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:31:02 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:31:02 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:31:06 | ERROR    | src.database.connection:test_connection:52 - Erreur de connexion à la base de données: (psycopg2.OperationalError) connection to server at "193.108.52.211", port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-08-19 15:31:11 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:31:12 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:31:12 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:31:12 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:31:12 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:31:12 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:31:13 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:31:14 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:31:14 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:31:14 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:31:14 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:31:14 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:33:35 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:33:37 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:33:37 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:33:37 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:33:37 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:33:37 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:33:41 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:33:43 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:33:43 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:33:43 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:33:43 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:33:43 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:33:44 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:33:45 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:33:45 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:33:45 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:33:45 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:33:45 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:35:10 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:35:11 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:35:11 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:35:11 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:35:11 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:35:11 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:35:25 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:35:27 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:35:27 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:35:27 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:35:27 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:35:27 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:35:29 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:35:30 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:35:30 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:35:30 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:35:30 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:35:30 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:35:30 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:35:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:35:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:35:31 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:35:31 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:35:31 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:36:03 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:36:05 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:36:05 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:36:05 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:36:05 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:36:05 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:36:36 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:36:38 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:36:38 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:36:38 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:36:38 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:36:38 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:37:24 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:37:26 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:37:26 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:37:26 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:37:26 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:37:26 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:37:40 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:37:41 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:37:41 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:37:41 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:37:41 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:37:41 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:37:57 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:37:59 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:37:59 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:37:59 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:37:59 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:37:59 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:38:25 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:38:26 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:38:26 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:38:26 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:38:26 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:38:26 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:38:44 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:38:45 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:38:45 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:38:45 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:38:45 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:38:45 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:38:50 | INFO     | src.database.connection:test_connection:49 - Connexion à la base de données réussie
+2025-08-19 15:39:00 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:39:01 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:39:01 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:39:01 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:39:01 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:39:01 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:39:08 | INFO     | src.database.connection:test_connection:49 - Connexion à la base de données réussie
+2025-08-19 15:40:44 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:40:45 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:40:45 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:40:45 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:40:45 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:48:14 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:48:14 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:48:16 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:48:16 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:48:16 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:48:16 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:48:16 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:48:16 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:48:16 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:48:16 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:48:16 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:48:16 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:48:55 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:48:55 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:48:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:48:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:48:57 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:48:57 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:48:57 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:48:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:48:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:48:57 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:48:57 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:48:57 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:49:16 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:49:16 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:49:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:49:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:49:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:49:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:49:17 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:49:17 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:49:17 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:49:17 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:49:17 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:49:17 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:49:31 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:49:31 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:49:32 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:49:32 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:49:32 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:49:32 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:49:32 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:49:32 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:49:32 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:49:32 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:49:32 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:49:32 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:49:40 | INFO     | src.database.connection:test_connection:49 - Connexion à la base de données réussie
+2025-08-19 15:52:45 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:52:45 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:52:46 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:52:46 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:52:46 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:52:46 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:52:46 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:52:46 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:52:46 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:52:46 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:52:46 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:52:46 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:52:47 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:52:47 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:52:48 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:52:48 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:52:48 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:52:48 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:52:48 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:52:48 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:52:48 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:52:48 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:52:48 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:52:48 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:55:35 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:55:35 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:55:36 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:55:36 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:55:36 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:55:36 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:55:36 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:55:36 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:55:36 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:55:36 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:55:36 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:55:36 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:55:36 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:55:36 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:55:37 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:55:37 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:55:37 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:55:37 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:55:37 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:55:37 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:55:37 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:55:37 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:55:37 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:55:37 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:55:54 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:55:54 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:55:56 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:55:56 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:55:56 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:55:56 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:55:56 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:55:56 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:55:56 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:55:56 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:55:56 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:55:56 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:56:10 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:56:10 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:56:12 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:56:12 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:56:12 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:56:12 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:56:12 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:56:12 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:56:12 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:56:12 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:56:12 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:56:12 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:56:23 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:56:23 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:56:25 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:56:25 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:56:25 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:56:25 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:56:25 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:56:25 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:56:25 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:56:25 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:56:25 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:56:25 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:56:56 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:56:56 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:56:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:56:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:56:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:56:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:56:57 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:56:57 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:56:57 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:56:57 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:56:57 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:56:57 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:57:06 | INFO     | src.database.connection:test_connection:49 - Connexion à la base de données réussie
+2025-08-19 15:57:23 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:57:23 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:57:25 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:57:25 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:57:25 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:57:25 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:57:25 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:57:25 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:57:25 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:57:25 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:57:25 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:57:25 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:57:41 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:57:41 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:57:42 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:57:42 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:57:42 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:57:42 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:57:42 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:57:42 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:57:42 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:57:42 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:57:42 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:57:42 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:57:51 | INFO     | src.database.connection:test_connection:49 - Connexion à la base de données réussie
+2025-08-19 15:57:55 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:57:55 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:57:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:57:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:57:57 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:57:57 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:57:57 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:57:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:57:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:57:57 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:57:57 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:57:57 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:57:57 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:57:57 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:57:58 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:57:58 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:57:58 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:57:58 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:57:58 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:57:58 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:57:59 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:57:59 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:57:59 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:57:59 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:59:21 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:59:21 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 15:59:22 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:59:22 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 15:59:22 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:59:22 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 15:59:22 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:59:22 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 15:59:22 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:59:22 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 15:59:22 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 15:59:22 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:00:32 | INFO     | src.database.connection:test_connection:49 - Connexion à la base de données réussie
+2025-08-19 16:00:46 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8001/api/v1/process-invoice
+2025-08-19 16:00:46 | INFO     | src.api.routes:process_invoice:55 - Début du traitement de la facture: 20250304163636929.pdf
+2025-08-19 16:00:46 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp3_61bsdb.pdf
+2025-08-19 16:00:46 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp3_61bsdb.pdf
+2025-08-19 16:00:47 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 16:00:47 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 16:00:47 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 16:00:47 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 16:00:49 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.73
+2025-08-19 16:00:50 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 16:00:50 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 16:00:50 | INFO     | src.api.routes:process_invoice:97 - Traitement terminé en 3.91s
+2025-08-19 16:00:50 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 3.93s
+2025-08-19 16:00:56 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:00:56 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:00:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:00:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:00:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:00:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:00:57 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:00:57 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:00:57 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:00:57 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:00:57 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:00:57 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:02:21 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:02:21 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:02:23 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:02:23 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:02:23 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:02:23 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:02:23 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:02:23 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:02:23 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:02:23 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:02:23 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:02:23 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:03:35 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:03:35 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:03:36 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:03:36 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:03:36 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:03:36 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:03:36 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:03:36 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:03:36 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:03:36 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:03:36 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:03:36 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:03:59 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:03:59 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:04:01 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:04:01 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:04:01 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:04:01 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:04:01 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:04:01 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:04:01 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:04:01 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:04:01 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:04:01 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:04:09 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:04:09 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:04:11 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:04:11 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:04:11 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:04:11 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:04:11 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:04:11 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:04:11 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:04:11 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:04:11 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:04:11 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:04:44 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8001/api/v1/process-invoice
+2025-08-19 16:04:44 | INFO     | src.api.routes:process_invoice:57 - Début du traitement de la facture: 20250304163709949.pdf
+2025-08-19 16:04:44 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpfjy7wvx9.pdf
+2025-08-19 16:04:44 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpfjy7wvx9.pdf
+2025-08-19 16:04:44 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 16:04:44 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 16:04:45 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 16:04:45 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 16:04:47 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.66
+2025-08-19 16:04:48 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:44 - Début de l'extraction ML améliorée
+2025-08-19 16:04:48 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 16:04:48 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 16:04:48 | ERROR    | src.extraction.ml_enhanced_extractor:_save_ml_training_data:427 - Erreur lors de la sauvegarde ML: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "invoice_ml_data" violates not-null constraint
+DETAIL:  Failing row contains (null, null, nr = .
+{ KI VILLE DE 2 SITSE Reçu le: N° Facture 1688218
+INYON..., {"extracted_data": {"metadata": {"filename": "processed_invoice"..., 0.40, 0.000, 0.50, 0.50, null, 2025-08-19 16:04:48.817634).
+
+[SQL: 
+                INSERT INTO invoice_ml_data (raw_text, extracted_data, confidence_score, 
+                                           processing_time, validation_score, data_quality_score)
+                VALUES (%(raw_text)s, %(extracted_data)s, %(confidence_score)s, %(processing_time)s, 
+                        %(validation_score)s, %(data_quality_score)s)
+            ]
+[parameters: {'raw_text': 'nr = .\n{ KI VILLE DE 2 SITSE Reçu le: N° Facture 1688218\nINYON | S [ S Date facture 14.02.2025 .\nid. Î pl FEV 2025 Echéance paiement 31.03.2025\n= ... (1853 characters truncated) ... i n .\n| CRETE ER HE Chemin de Balessert 5\n; ounex\nMonnaie Montant Monnaie Montant\nCHF 12671.55 CHF 12671.55\nPoint de dépôt |\nE |\n99-7 v 14 275', 'extracted_data': '{"extracted_data": {"metadata": {"filename": "processed_invoice", "processing_date": "2025-08-19 16:04:48.772436", "confidence_score": 0.4, "processi ... (650 characters truncated) ... t": true, "data_quality_score": 0.5}}, "confidence_score": 0.4, "processing_time": 0.0, "validation_score": 0.5, "filename": "20250304163709949.pdf"}', 'confidence_score': 0.4, 'processing_time': 0.0, 'validation_score': 0.5, 'data_quality_score': 0.5}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:04:48 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:61 - Extraction ML améliorée terminée
+2025-08-19 16:04:48 | INFO     | src.api.routes:process_invoice:100 - Traitement terminé en 4.38s
+2025-08-19 16:04:48 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 4.39s
+2025-08-19 16:06:30 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:06:30 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:06:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:06:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:06:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:06:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:06:31 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:06:31 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:06:31 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:06:31 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:06:31 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:06:31 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:06:32 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:06:32 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:06:34 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:06:34 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:06:34 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:06:34 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:06:34 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:06:34 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:06:34 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:06:34 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:06:34 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:06:34 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:06:42 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:06:42 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:06:43 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:06:43 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:06:43 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:06:43 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:06:43 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:06:43 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:06:43 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:06:43 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:06:43 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:06:43 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:06:46 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:06:46 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:06:47 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:06:47 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:06:47 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:06:47 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:06:47 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:06:47 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:06:47 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:06:47 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:06:47 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:06:47 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:07:15 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:07:15 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:07:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:07:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:07:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:07:17 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:07:17 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:07:17 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:07:17 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:07:17 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:07:17 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:07:17 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:07:17 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:07:17 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:07:18 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:07:19 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:07:19 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:07:19 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:07:19 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:07:19 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:07:19 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:07:19 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:07:19 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:07:19 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:07:29 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:07:29 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:07:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:07:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:07:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:07:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:07:31 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:07:31 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:07:31 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:07:31 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:07:31 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:07:31 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:07:38 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:07:38 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:07:40 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:07:40 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:07:40 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:07:40 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:07:40 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:07:40 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:07:40 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:07:40 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:07:40 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:07:40 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:08:43 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:08:43 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:08:44 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:08:44 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:08:44 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:08:44 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:08:44 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:08:44 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:08:44 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:08:44 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:08:44 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:08:44 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:09:01 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 16:09:01 | INFO     | src.api.routes:process_invoice:59 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 16:09:01 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpre2paibo.pdf
+2025-08-19 16:09:01 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpre2paibo.pdf
+2025-08-19 16:09:01 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 16:09:01 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 16:09:01 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 16:09:01 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 16:09:03 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 16:09:03 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:44 - Début de l'extraction ML améliorée
+2025-08-19 16:09:03 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 16:09:03 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 16:09:03 | ERROR    | src.extraction.ml_enhanced_extractor:_enhance_amounts_with_history:204 - Erreur lors de l'amélioration des montants: 'str' object is not callable
+2025-08-19 16:09:03 | ERROR    | src.extraction.ml_enhanced_extractor:_save_ml_training_data:427 - Erreur lors de la sauvegarde ML: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "invoice_ml_data" violates not-null constraint
+DETAIL:  Failing row contains (null, null, SMART(OMPEL
+SMARTCOMPIL PRAGUE DATE
+7 rond-point de Stockholm FA..., {"extracted_data": {"metadata": {"filename": "processed_invoice"..., 0.60, 0.000, 0.75, 0.75, null, 2025-08-19 16:09:03.822411).
+
+[SQL: 
+                INSERT INTO invoice_ml_data (raw_text, extracted_data, confidence_score, 
+                                           processing_time, validation_score, data_quality_score)
+                VALUES (%(raw_text)s, %(extracted_data)s, %(confidence_score)s, %(processing_time)s, 
+                        %(validation_score)s, %(data_quality_score)s)
+            ]
+[parameters: {'raw_text': "SMART(OMPEL\nSMARTCOMPIL PRAGUE DATE\n7 rond-point de Stockholm FAC-SC-202500612 01/07/2025\n78990 ELANCOURT\ncontact@smartcompil.fr PERIODE |  juin2 ... (937 characters truncated) ... 91023510000021 / TVA : FR15910235100 / RCS Versailles B 910235100\nIBAN : FR76 3000 3022 0500 0204 6390 036\nNous vous remercions de votre confiance.", 'extracted_data': '{"extracted_data": {"metadata": {"filename": "processed_invoice", "processing_date": "2025-08-19 16:09:03.789524", "confidence_score": 0.6, "processi ... (840 characters truncated) ...  0.75}}, "confidence_score": 0.6, "processing_time": 0.0, "validation_score": 0.75, "filename": "FAC-SC-202500612 R\\u00e9f N\\u00b0 25-06-2194.pdf"}', 'confidence_score': 0.6, 'processing_time': 0.0, 'validation_score': 0.75, 'data_quality_score': 0.75}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:09:03 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:61 - Extraction ML améliorée terminée
+2025-08-19 16:09:03 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:30 - Création de la facture en base de données
+2025-08-19 16:09:03 | ERROR    | src.services.invoice_service:_insert_invoice_to_db:206 - Erreur lors de l'insertion en base: (psycopg2.errors.ForeignKeyViolation) insert or update on table "invoice" violates foreign key constraint "invoice_company_erp_code_fkey"
+DETAIL:  Key (company_erp_code)=(SITSE) is not present in table "company".
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': '65b231ae-64c9-450a-a1d2-f3d90ce8f82c', 'invoice_number': 'SC-202500612', 'invoice_date': datetime.date(2025, 7, 1), 'company_erp_code': 'SITSE', 'supplier_name': None, 'excluding_taxes': 3000.0, 'vat': 600.0, 'including_taxes': 3600.0, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 9, 3, 824312), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:09:03 | ERROR    | src.services.invoice_service:create_invoice_from_extracted_data:93 - Erreur lors de la création de la facture: (psycopg2.errors.ForeignKeyViolation) insert or update on table "invoice" violates foreign key constraint "invoice_company_erp_code_fkey"
+DETAIL:  Key (company_erp_code)=(SITSE) is not present in table "company".
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': '65b231ae-64c9-450a-a1d2-f3d90ce8f82c', 'invoice_number': 'SC-202500612', 'invoice_date': datetime.date(2025, 7, 1), 'company_erp_code': 'SITSE', 'supplier_name': None, 'excluding_taxes': 3000.0, 'vat': 600.0, 'including_taxes': 3600.0, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 9, 3, 824312), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:09:03 | ERROR    | src.api.routes:process_invoice:159 - Erreur interne: (psycopg2.errors.ForeignKeyViolation) insert or update on table "invoice" violates foreign key constraint "invoice_company_erp_code_fkey"
+DETAIL:  Key (company_erp_code)=(SITSE) is not present in table "company".
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': '65b231ae-64c9-450a-a1d2-f3d90ce8f82c', 'invoice_number': 'SC-202500612', 'invoice_date': datetime.date(2025, 7, 1), 'company_erp_code': 'SITSE', 'supplier_name': None, 'excluding_taxes': 3000.0, 'vat': 600.0, 'including_taxes': 3600.0, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 9, 3, 824312), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:09:03 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 500: {'status': 'error', 'error_code': 'INTERNAL_ERROR', 'message': 'Erreur interne du serveur', 'details': {'error': '(psycopg2.errors.ForeignKeyViolation) insert or update on table "invoice" violates foreign key constraint "invoice_company_erp_code_fkey"\nDETAIL:  Key (company_erp_code)=(SITSE) is not present in table "company".\n\n[SQL: \n                INSERT INTO invoice (\n                    id, invoice_number, invoice_date, company_erp_code, supplier_name,\n                    excluding_taxes, vat, including_taxes, payment_state, currency_code,\n                    is_complete, is_draft, created_date, created_by\n                ) VALUES (\n                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,\n                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,\n                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s\n                )\n            ]\n[parameters: {\'id\': \'65b231ae-64c9-450a-a1d2-f3d90ce8f82c\', \'invoice_number\': \'SC-202500612\', \'invoice_date\': datetime.date(2025, 7, 1), \'company_erp_code\': \'SITSE\', \'supplier_name\': None, \'excluding_taxes\': 3000.0, \'vat\': 600.0, \'including_taxes\': 3600.0, \'payment_state\': \'DRAFT\', \'currency_code\': \'EUR\', \'is_complete\': False, \'is_draft\': True, \'created_date\': datetime.datetime(2025, 8, 19, 16, 9, 3, 824312), \'created_by\': \'ocr_system\'}]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)'}}
+2025-08-19 16:09:03 | INFO     | src.main:log_requests:131 - Réponse: 500 - Temps de traitement: 2.71s
+2025-08-19 16:09:20 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:09:20 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:09:22 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:09:22 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:09:22 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:09:22 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:09:22 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:09:22 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:09:22 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:09:22 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:09:22 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:09:22 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:09:26 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 16:09:26 | INFO     | src.api.routes:process_invoice:59 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 16:09:26 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp6m_c9c53.pdf
+2025-08-19 16:09:26 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp6m_c9c53.pdf
+2025-08-19 16:09:26 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 16:09:26 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 16:09:27 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 16:09:27 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 16:09:28 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 16:09:29 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:44 - Début de l'extraction ML améliorée
+2025-08-19 16:09:29 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 16:09:29 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 16:09:29 | ERROR    | src.extraction.ml_enhanced_extractor:_enhance_amounts_with_history:204 - Erreur lors de l'amélioration des montants: 'str' object is not callable
+2025-08-19 16:09:29 | ERROR    | src.extraction.ml_enhanced_extractor:_save_ml_training_data:427 - Erreur lors de la sauvegarde ML: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "invoice_ml_data" violates not-null constraint
+DETAIL:  Failing row contains (null, null, SMART(OMPEL
+SMARTCOMPIL PRAGUE DATE
+7 rond-point de Stockholm FA..., {"extracted_data": {"metadata": {"filename": "processed_invoice"..., 0.60, 0.000, 0.75, 0.75, null, 2025-08-19 16:09:29.498685).
+
+[SQL: 
+                INSERT INTO invoice_ml_data (raw_text, extracted_data, confidence_score, 
+                                           processing_time, validation_score, data_quality_score)
+                VALUES (%(raw_text)s, %(extracted_data)s, %(confidence_score)s, %(processing_time)s, 
+                        %(validation_score)s, %(data_quality_score)s)
+            ]
+[parameters: {'raw_text': "SMART(OMPEL\nSMARTCOMPIL PRAGUE DATE\n7 rond-point de Stockholm FAC-SC-202500612 01/07/2025\n78990 ELANCOURT\ncontact@smartcompil.fr PERIODE |  juin2 ... (937 characters truncated) ... 91023510000021 / TVA : FR15910235100 / RCS Versailles B 910235100\nIBAN : FR76 3000 3022 0500 0204 6390 036\nNous vous remercions de votre confiance.", 'extracted_data': '{"extracted_data": {"metadata": {"filename": "processed_invoice", "processing_date": "2025-08-19 16:09:29.468486", "confidence_score": 0.6, "processi ... (840 characters truncated) ...  0.75}}, "confidence_score": 0.6, "processing_time": 0.0, "validation_score": 0.75, "filename": "FAC-SC-202500612 R\\u00e9f N\\u00b0 25-06-2194.pdf"}', 'confidence_score': 0.6, 'processing_time': 0.0, 'validation_score': 0.75, 'data_quality_score': 0.75}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:09:29 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:61 - Extraction ML améliorée terminée
+2025-08-19 16:09:29 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:30 - Création de la facture en base de données
+2025-08-19 16:09:29 | ERROR    | src.services.invoice_service:_find_or_create_company:148 - Erreur lors de la recherche de société: (psycopg2.errors.UndefinedColumn) column "company_erp_code" does not exist
+LINE 2:                 SELECT company_erp_code 
+                               ^
+
+[SQL: 
+                SELECT company_erp_code 
+                FROM company 
+                LIMIT 1
+            ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-08-19 16:09:29 | ERROR    | src.services.invoice_service:_insert_invoice_to_db:217 - Erreur lors de l'insertion en base: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': 'fee8128b-ebbb-49e8-a1da-ee1e23c80e5b', 'invoice_number': 'SC-202500612', 'invoice_date': datetime.date(2025, 7, 1), 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': 3000.0, 'vat': 600.0, 'including_taxes': 3600.0, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 9, 29, 500903), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-08-19 16:09:29 | ERROR    | src.services.invoice_service:create_invoice_from_extracted_data:93 - Erreur lors de la création de la facture: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': 'fee8128b-ebbb-49e8-a1da-ee1e23c80e5b', 'invoice_number': 'SC-202500612', 'invoice_date': datetime.date(2025, 7, 1), 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': 3000.0, 'vat': 600.0, 'including_taxes': 3600.0, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 9, 29, 500903), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-08-19 16:09:29 | ERROR    | src.api.routes:process_invoice:159 - Erreur interne: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': 'fee8128b-ebbb-49e8-a1da-ee1e23c80e5b', 'invoice_number': 'SC-202500612', 'invoice_date': datetime.date(2025, 7, 1), 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': 3000.0, 'vat': 600.0, 'including_taxes': 3600.0, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 9, 29, 500903), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-08-19 16:09:29 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 500: {'status': 'error', 'error_code': 'INTERNAL_ERROR', 'message': 'Erreur interne du serveur', 'details': {'error': "(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n\n[SQL: \n                INSERT INTO invoice (\n                    id, invoice_number, invoice_date, company_erp_code, supplier_name,\n                    excluding_taxes, vat, including_taxes, payment_state, currency_code,\n                    is_complete, is_draft, created_date, created_by\n                ) VALUES (\n                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,\n                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,\n                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s\n                )\n            ]\n[parameters: {'id': 'fee8128b-ebbb-49e8-a1da-ee1e23c80e5b', 'invoice_number': 'SC-202500612', 'invoice_date': datetime.date(2025, 7, 1), 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': 3000.0, 'vat': 600.0, 'including_taxes': 3600.0, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 9, 29, 500903), 'created_by': 'ocr_system'}]\n(Background on this error at: https://sqlalche.me/e/20/2j85)"}}
+2025-08-19 16:09:29 | INFO     | src.main:log_requests:131 - Réponse: 500 - Temps de traitement: 2.79s
+2025-08-19 16:09:43 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:09:43 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:09:45 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:09:45 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:09:45 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:09:45 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:09:45 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:09:45 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:09:45 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:09:45 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:09:45 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:09:45 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:09:49 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 16:09:49 | INFO     | src.api.routes:process_invoice:59 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 16:09:49 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpu5mty81l.pdf
+2025-08-19 16:09:49 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpu5mty81l.pdf
+2025-08-19 16:09:49 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 16:09:49 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 16:09:49 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 16:09:49 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 16:09:51 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 16:09:51 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:44 - Début de l'extraction ML améliorée
+2025-08-19 16:09:51 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 16:09:51 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 16:09:51 | ERROR    | src.extraction.ml_enhanced_extractor:_enhance_amounts_with_history:204 - Erreur lors de l'amélioration des montants: 'str' object is not callable
+2025-08-19 16:09:51 | ERROR    | src.extraction.ml_enhanced_extractor:_save_ml_training_data:427 - Erreur lors de la sauvegarde ML: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "invoice_ml_data" violates not-null constraint
+DETAIL:  Failing row contains (null, null, SMART(OMPEL
+SMARTCOMPIL PRAGUE DATE
+7 rond-point de Stockholm FA..., {"extracted_data": {"metadata": {"filename": "processed_invoice"..., 0.60, 0.000, 0.75, 0.75, null, 2025-08-19 16:09:51.912859).
+
+[SQL: 
+                INSERT INTO invoice_ml_data (raw_text, extracted_data, confidence_score, 
+                                           processing_time, validation_score, data_quality_score)
+                VALUES (%(raw_text)s, %(extracted_data)s, %(confidence_score)s, %(processing_time)s, 
+                        %(validation_score)s, %(data_quality_score)s)
+            ]
+[parameters: {'raw_text': "SMART(OMPEL\nSMARTCOMPIL PRAGUE DATE\n7 rond-point de Stockholm FAC-SC-202500612 01/07/2025\n78990 ELANCOURT\ncontact@smartcompil.fr PERIODE |  juin2 ... (937 characters truncated) ... 91023510000021 / TVA : FR15910235100 / RCS Versailles B 910235100\nIBAN : FR76 3000 3022 0500 0204 6390 036\nNous vous remercions de votre confiance.", 'extracted_data': '{"extracted_data": {"metadata": {"filename": "processed_invoice", "processing_date": "2025-08-19 16:09:51.883902", "confidence_score": 0.6, "processi ... (840 characters truncated) ...  0.75}}, "confidence_score": 0.6, "processing_time": 0.0, "validation_score": 0.75, "filename": "FAC-SC-202500612 R\\u00e9f N\\u00b0 25-06-2194.pdf"}', 'confidence_score': 0.6, 'processing_time': 0.0, 'validation_score': 0.75, 'data_quality_score': 0.75}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:09:51 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:61 - Extraction ML améliorée terminée
+2025-08-19 16:09:51 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:33 - Création de la facture en base de données
+2025-08-19 16:09:51 | ERROR    | src.services.invoice_service:_find_or_create_company:155 - Erreur lors de la recherche de société: (psycopg2.errors.UndefinedColumn) column "company_erp_code" does not exist
+LINE 2:                 SELECT company_erp_code 
+                               ^
+
+[SQL: 
+                SELECT company_erp_code 
+                FROM company 
+                LIMIT 1
+            ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-08-19 16:09:51 | ERROR    | src.services.invoice_service:_insert_invoice_to_db:224 - Erreur lors de l'insertion en base: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': 'c048fcb1-990d-42d5-943c-9d87886c8aee', 'invoice_number': 'SC-202500612', 'invoice_date': datetime.date(2025, 7, 1), 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': 3000.0, 'vat': 600.0, 'including_taxes': 3600.0, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 9, 51, 914752), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-08-19 16:09:51 | ERROR    | src.services.invoice_service:create_invoice_from_extracted_data:96 - Erreur lors de la création de la facture: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': 'c048fcb1-990d-42d5-943c-9d87886c8aee', 'invoice_number': 'SC-202500612', 'invoice_date': datetime.date(2025, 7, 1), 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': 3000.0, 'vat': 600.0, 'including_taxes': 3600.0, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 9, 51, 914752), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-08-19 16:09:51 | ERROR    | src.api.routes:process_invoice:159 - Erreur interne: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': 'c048fcb1-990d-42d5-943c-9d87886c8aee', 'invoice_number': 'SC-202500612', 'invoice_date': datetime.date(2025, 7, 1), 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': 3000.0, 'vat': 600.0, 'including_taxes': 3600.0, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 9, 51, 914752), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-08-19 16:09:51 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 500: {'status': 'error', 'error_code': 'INTERNAL_ERROR', 'message': 'Erreur interne du serveur', 'details': {'error': "(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n\n[SQL: \n                INSERT INTO invoice (\n                    id, invoice_number, invoice_date, company_erp_code, supplier_name,\n                    excluding_taxes, vat, including_taxes, payment_state, currency_code,\n                    is_complete, is_draft, created_date, created_by\n                ) VALUES (\n                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,\n                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,\n                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s\n                )\n            ]\n[parameters: {'id': 'c048fcb1-990d-42d5-943c-9d87886c8aee', 'invoice_number': 'SC-202500612', 'invoice_date': datetime.date(2025, 7, 1), 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': 3000.0, 'vat': 600.0, 'including_taxes': 3600.0, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 9, 51, 914752), 'created_by': 'ocr_system'}]\n(Background on this error at: https://sqlalche.me/e/20/2j85)"}}
+2025-08-19 16:09:51 | INFO     | src.main:log_requests:131 - Réponse: 500 - Temps de traitement: 2.72s
+2025-08-19 16:09:56 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:09:56 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:10:04 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:10:04 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:10:04 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:10:04 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:10:04 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:10:58 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 16:10:58 | INFO     | src.api.routes:process_invoice:59 - Début du traitement de la facture: 20250304163636929.pdf
+2025-08-19 16:10:58 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpu_8n9ci7.pdf
+2025-08-19 16:10:58 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpu_8n9ci7.pdf
+2025-08-19 16:10:59 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 16:10:59 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 16:10:59 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 16:10:59 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 16:11:01 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.73
+2025-08-19 16:11:02 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:44 - Début de l'extraction ML améliorée
+2025-08-19 16:11:02 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 16:11:02 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 16:11:02 | ERROR    | src.extraction.ml_enhanced_extractor:_enhance_amounts_with_history:204 - Erreur lors de l'amélioration des montants: 'str' object is not callable
+2025-08-19 16:11:02 | ERROR    | src.extraction.ml_enhanced_extractor:_save_ml_training_data:427 - Erreur lors de la sauvegarde ML: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "invoice_ml_data" violates not-null constraint
+DETAIL:  Failing row contains (null, null, / |
+| SITSE Reçu le:
+V4 N Votre numéro de client : 1 086 778 P..., {"extracted_data": {"metadata": {"filename": "processed_invoice"..., 0.60, 0.000, 0.25, 0.25, null, 2025-08-19 16:11:02.47162).
+
+[SQL: 
+                INSERT INTO invoice_ml_data (raw_text, extracted_data, confidence_score, 
+                                           processing_time, validation_score, data_quality_score)
+                VALUES (%(raw_text)s, %(extracted_data)s, %(confidence_score)s, %(processing_time)s, 
+                        %(validation_score)s, %(data_quality_score)s)
+            ]
+[parameters: {'raw_text': "/ |\n| SITSE Reçu le:\nV4 N Votre numéro de client : 1 086 778 Page 1/4\nq N° de facture : 110 009 850 987\nROMANDE 13 FEV, 05 N° pt mesure: CH101110 ... (1480 characters truncated) ... \nChemin Ballessert 5 1 En tr arr Énengesl à ï\n1297 Founex ' (nr san bn]\nMonnale Montant Monnaie Montant\nCHF 1858.75 ! CHF 1858.75\nPoint de dépôt", 'extracted_data': '{"extracted_data": {"metadata": {"filename": "processed_invoice", "processing_date": "2025-08-19 16:11:02.444109", "confidence_score": 0.6, "processi ... (1486 characters truncated) ...  false, "data_quality_score": 0.25}}, "confidence_score": 0.6, "processing_time": 0.0, "validation_score": 0.25, "filename": "20250304163636929.pdf"}', 'confidence_score': 0.6, 'processing_time': 0.0, 'validation_score': 0.25, 'data_quality_score': 0.25}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:11:02 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:61 - Extraction ML améliorée terminée
+2025-08-19 16:11:02 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:33 - Création de la facture en base de données
+2025-08-19 16:11:02 | ERROR    | src.services.invoice_service:_find_or_create_company:155 - Erreur lors de la recherche de société: (psycopg2.errors.UndefinedColumn) column "company_erp_code" does not exist
+LINE 2:                 SELECT company_erp_code 
+                               ^
+
+[SQL: 
+                SELECT company_erp_code 
+                FROM company 
+                LIMIT 1
+            ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-08-19 16:11:02 | ERROR    | src.services.invoice_service:_insert_invoice_to_db:224 - Erreur lors de l'insertion en base: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': '5bfccdd9-2e91-4132-9b42-256ae28a9966', 'invoice_number': 'ture', 'invoice_date': None, 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': None, 'vat': 136.35, 'including_taxes': None, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 11, 2, 473810), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-08-19 16:11:02 | ERROR    | src.services.invoice_service:create_invoice_from_extracted_data:96 - Erreur lors de la création de la facture: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': '5bfccdd9-2e91-4132-9b42-256ae28a9966', 'invoice_number': 'ture', 'invoice_date': None, 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': None, 'vat': 136.35, 'including_taxes': None, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 11, 2, 473810), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-08-19 16:11:02 | ERROR    | src.api.routes:process_invoice:159 - Erreur interne: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                INSERT INTO invoice (
+                    id, invoice_number, invoice_date, company_erp_code, supplier_name,
+                    excluding_taxes, vat, including_taxes, payment_state, currency_code,
+                    is_complete, is_draft, created_date, created_by
+                ) VALUES (
+                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,
+                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,
+                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s
+                )
+            ]
+[parameters: {'id': '5bfccdd9-2e91-4132-9b42-256ae28a9966', 'invoice_number': 'ture', 'invoice_date': None, 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': None, 'vat': 136.35, 'including_taxes': None, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 11, 2, 473810), 'created_by': 'ocr_system'}]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-08-19 16:11:02 | ERROR    | src.main:http_exception_handler:78 - Erreur HTTP 500: {'status': 'error', 'error_code': 'INTERNAL_ERROR', 'message': 'Erreur interne du serveur', 'details': {'error': "(psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block\n\n[SQL: \n                INSERT INTO invoice (\n                    id, invoice_number, invoice_date, company_erp_code, supplier_name,\n                    excluding_taxes, vat, including_taxes, payment_state, currency_code,\n                    is_complete, is_draft, created_date, created_by\n                ) VALUES (\n                    %(id)s, %(invoice_number)s, %(invoice_date)s, %(company_erp_code)s, %(supplier_name)s,\n                    %(excluding_taxes)s, %(vat)s, %(including_taxes)s, %(payment_state)s, %(currency_code)s,\n                    %(is_complete)s, %(is_draft)s, %(created_date)s, %(created_by)s\n                )\n            ]\n[parameters: {'id': '5bfccdd9-2e91-4132-9b42-256ae28a9966', 'invoice_number': 'ture', 'invoice_date': None, 'company_erp_code': None, 'supplier_name': None, 'excluding_taxes': None, 'vat': 136.35, 'including_taxes': None, 'payment_state': 'DRAFT', 'currency_code': 'EUR', 'is_complete': False, 'is_draft': True, 'created_date': datetime.datetime(2025, 8, 19, 16, 11, 2, 473810), 'created_by': 'ocr_system'}]\n(Background on this error at: https://sqlalche.me/e/20/2j85)"}}
+2025-08-19 16:11:02 | INFO     | src.main:log_requests:131 - Réponse: 500 - Temps de traitement: 3.66s
+2025-08-19 16:11:38 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:11:39 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:11:39 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:11:39 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:11:39 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:11:39 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:11:39 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:11:40 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:11:40 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:11:40 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:11:40 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:11:40 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:12:42 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 16:12:42 | INFO     | src.api.routes:process_invoice:59 - Début du traitement de la facture: 20250304163636929.pdf
+2025-08-19 16:12:42 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp6xrr6wh7.pdf
+2025-08-19 16:12:42 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp6xrr6wh7.pdf
+2025-08-19 16:12:42 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 16:12:42 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 16:12:43 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 16:12:43 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 16:12:45 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.73
+2025-08-19 16:12:46 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:44 - Début de l'extraction ML améliorée
+2025-08-19 16:12:46 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 16:12:46 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 16:12:46 | ERROR    | src.extraction.ml_enhanced_extractor:_enhance_amounts_with_history:204 - Erreur lors de l'amélioration des montants: 'str' object is not callable
+2025-08-19 16:12:46 | ERROR    | src.extraction.ml_enhanced_extractor:_save_ml_training_data:427 - Erreur lors de la sauvegarde ML: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "invoice_ml_data" violates not-null constraint
+DETAIL:  Failing row contains (null, null, / |
+| SITSE Reçu le:
+V4 N Votre numéro de client : 1 086 778 P..., {"extracted_data": {"metadata": {"filename": "processed_invoice"..., 0.60, 0.000, 0.25, 0.25, null, 2025-08-19 16:12:46.198509).
+
+[SQL: 
+                INSERT INTO invoice_ml_data (raw_text, extracted_data, confidence_score, 
+                                           processing_time, validation_score, data_quality_score)
+                VALUES (%(raw_text)s, %(extracted_data)s, %(confidence_score)s, %(processing_time)s, 
+                        %(validation_score)s, %(data_quality_score)s)
+            ]
+[parameters: {'raw_text': "/ |\n| SITSE Reçu le:\nV4 N Votre numéro de client : 1 086 778 Page 1/4\nq N° de facture : 110 009 850 987\nROMANDE 13 FEV, 05 N° pt mesure: CH101110 ... (1480 characters truncated) ... \nChemin Ballessert 5 1 En tr arr Énengesl à ï\n1297 Founex ' (nr san bn]\nMonnale Montant Monnaie Montant\nCHF 1858.75 ! CHF 1858.75\nPoint de dépôt", 'extracted_data': '{"extracted_data": {"metadata": {"filename": "processed_invoice", "processing_date": "2025-08-19 16:12:46.171424", "confidence_score": 0.6, "processi ... (1486 characters truncated) ...  false, "data_quality_score": 0.25}}, "confidence_score": 0.6, "processing_time": 0.0, "validation_score": 0.25, "filename": "20250304163636929.pdf"}', 'confidence_score': 0.6, 'processing_time': 0.0, 'validation_score': 0.25, 'data_quality_score': 0.25}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:12:46 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:61 - Extraction ML améliorée terminée
+2025-08-19 16:12:46 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:30 - Création du DTO Invoice à partir des données extraites
+2025-08-19 16:12:46 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:72 - DTO Invoice créé avec succès - ID: 80fac76e-ab3c-4910-9d96-f70730804422
+2025-08-19 16:12:46 | INFO     | src.api.routes:process_invoice:109 - Traitement terminé en 3.59s
+2025-08-19 16:12:46 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 3.59s
+2025-08-19 16:12:55 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 16:12:55 | INFO     | src.api.routes:process_invoice:59 - Début du traitement de la facture: FAC-SC-202500612 Réf N° 25-06-2194.pdf
+2025-08-19 16:12:55 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp7x1w4ufu.pdf
+2025-08-19 16:12:55 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmp7x1w4ufu.pdf
+2025-08-19 16:12:55 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 16:12:55 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 16:12:55 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 16:12:55 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 16:12:57 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.90
+2025-08-19 16:12:57 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:44 - Début de l'extraction ML améliorée
+2025-08-19 16:12:57 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 16:12:57 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 16:12:57 | ERROR    | src.extraction.ml_enhanced_extractor:_enhance_amounts_with_history:204 - Erreur lors de l'amélioration des montants: 'str' object is not callable
+2025-08-19 16:12:57 | ERROR    | src.extraction.ml_enhanced_extractor:_save_ml_training_data:427 - Erreur lors de la sauvegarde ML: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "invoice_ml_data" violates not-null constraint
+DETAIL:  Failing row contains (null, null, SMART(OMPEL
+SMARTCOMPIL PRAGUE DATE
+7 rond-point de Stockholm FA..., {"extracted_data": {"metadata": {"filename": "processed_invoice"..., 0.60, 0.000, 0.75, 0.75, null, 2025-08-19 16:12:57.740104).
+
+[SQL: 
+                INSERT INTO invoice_ml_data (raw_text, extracted_data, confidence_score, 
+                                           processing_time, validation_score, data_quality_score)
+                VALUES (%(raw_text)s, %(extracted_data)s, %(confidence_score)s, %(processing_time)s, 
+                        %(validation_score)s, %(data_quality_score)s)
+            ]
+[parameters: {'raw_text': "SMART(OMPEL\nSMARTCOMPIL PRAGUE DATE\n7 rond-point de Stockholm FAC-SC-202500612 01/07/2025\n78990 ELANCOURT\ncontact@smartcompil.fr PERIODE |  juin2 ... (937 characters truncated) ... 91023510000021 / TVA : FR15910235100 / RCS Versailles B 910235100\nIBAN : FR76 3000 3022 0500 0204 6390 036\nNous vous remercions de votre confiance.", 'extracted_data': '{"extracted_data": {"metadata": {"filename": "processed_invoice", "processing_date": "2025-08-19 16:12:57.733567", "confidence_score": 0.6, "processi ... (840 characters truncated) ...  0.75}}, "confidence_score": 0.6, "processing_time": 0.0, "validation_score": 0.75, "filename": "FAC-SC-202500612 R\\u00e9f N\\u00b0 25-06-2194.pdf"}', 'confidence_score': 0.6, 'processing_time': 0.0, 'validation_score': 0.75, 'data_quality_score': 0.75}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:12:57 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:61 - Extraction ML améliorée terminée
+2025-08-19 16:12:57 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:30 - Création du DTO Invoice à partir des données extraites
+2025-08-19 16:12:57 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:72 - DTO Invoice créé avec succès - ID: 2123483c-0c91-40ce-855e-0bd0b6fe0946
+2025-08-19 16:12:57 | INFO     | src.api.routes:process_invoice:109 - Traitement terminé en 2.63s
+2025-08-19 16:12:57 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 2.63s
+2025-08-19 16:13:37 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 16:13:37 | INFO     | src.api.routes:process_invoice:59 - Début du traitement de la facture: 20250304163636929.pdf
+2025-08-19 16:13:37 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmphikvacyd.pdf
+2025-08-19 16:13:37 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmphikvacyd.pdf
+2025-08-19 16:13:37 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 16:13:37 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 16:13:38 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 16:13:38 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 16:13:40 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.73
+2025-08-19 16:13:41 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:44 - Début de l'extraction ML améliorée
+2025-08-19 16:13:41 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 16:13:41 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 16:13:41 | ERROR    | src.extraction.ml_enhanced_extractor:_enhance_amounts_with_history:204 - Erreur lors de l'amélioration des montants: 'str' object is not callable
+2025-08-19 16:13:41 | ERROR    | src.extraction.ml_enhanced_extractor:_save_ml_training_data:427 - Erreur lors de la sauvegarde ML: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "invoice_ml_data" violates not-null constraint
+DETAIL:  Failing row contains (null, null, / |
+| SITSE Reçu le:
+V4 N Votre numéro de client : 1 086 778 P..., {"extracted_data": {"metadata": {"filename": "processed_invoice"..., 0.60, 0.000, 0.25, 0.25, null, 2025-08-19 16:13:41.110505).
+
+[SQL: 
+                INSERT INTO invoice_ml_data (raw_text, extracted_data, confidence_score, 
+                                           processing_time, validation_score, data_quality_score)
+                VALUES (%(raw_text)s, %(extracted_data)s, %(confidence_score)s, %(processing_time)s, 
+                        %(validation_score)s, %(data_quality_score)s)
+            ]
+[parameters: {'raw_text': "/ |\n| SITSE Reçu le:\nV4 N Votre numéro de client : 1 086 778 Page 1/4\nq N° de facture : 110 009 850 987\nROMANDE 13 FEV, 05 N° pt mesure: CH101110 ... (1480 characters truncated) ... \nChemin Ballessert 5 1 En tr arr Énengesl à ï\n1297 Founex ' (nr san bn]\nMonnale Montant Monnaie Montant\nCHF 1858.75 ! CHF 1858.75\nPoint de dépôt", 'extracted_data': '{"extracted_data": {"metadata": {"filename": "processed_invoice", "processing_date": "2025-08-19 16:13:41.108772", "confidence_score": 0.6, "processi ... (1486 characters truncated) ...  false, "data_quality_score": 0.25}}, "confidence_score": 0.6, "processing_time": 0.0, "validation_score": 0.25, "filename": "20250304163636929.pdf"}', 'confidence_score': 0.6, 'processing_time': 0.0, 'validation_score': 0.25, 'data_quality_score': 0.25}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:13:41 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:61 - Extraction ML améliorée terminée
+2025-08-19 16:13:41 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:30 - Création du DTO Invoice à partir des données extraites
+2025-08-19 16:13:41 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:72 - DTO Invoice créé avec succès - ID: 09dc3fbe-6b2d-49ed-aa61-3af2237c48ca
+2025-08-19 16:13:41 | INFO     | src.api.routes:process_invoice:109 - Traitement terminé en 3.53s
+2025-08-19 16:13:41 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 3.54s
+2025-08-19 16:20:29 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:20:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:20:31 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:20:31 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:20:31 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:20:31 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:20:32 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:20:33 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:20:33 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:20:33 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:20:33 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:20:33 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:22:33 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:22:35 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:22:35 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:22:35 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:22:35 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:22:35 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:25:39 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:25:41 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:25:41 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:25:41 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:25:41 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:25:41 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:26:27 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:26:28 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:26:28 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:26:28 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:26:28 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:26:28 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:26:54 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:26:56 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:26:56 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:26:56 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:26:56 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:26:56 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:27:08 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:27:09 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:27:09 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:27:10 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:27:10 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:27:10 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:27:32 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:27:34 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:27:34 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:27:34 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:27:34 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:27:34 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:27:59 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:28:00 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:28:00 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:28:00 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:28:00 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:28:00 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:28:16 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:28:18 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:28:18 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:28:18 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:28:18 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:28:18 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:28:27 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 16:28:27 | INFO     | src.api.routes:process_invoice:59 - Début du traitement de la facture: 20250304163636929.pdf
+2025-08-19 16:28:27 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpsl4qqvts.pdf
+2025-08-19 16:28:27 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpsl4qqvts.pdf
+2025-08-19 16:28:27 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 16:28:27 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 16:28:28 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 16:28:28 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 16:28:30 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.73
+2025-08-19 16:28:31 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:44 - Début de l'extraction ML améliorée
+2025-08-19 16:28:31 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 16:28:31 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 16:28:31 | ERROR    | src.extraction.ml_enhanced_extractor:_enhance_amounts_with_history:204 - Erreur lors de l'amélioration des montants: 'str' object is not callable
+2025-08-19 16:28:31 | ERROR    | src.extraction.ml_enhanced_extractor:_save_ml_training_data:427 - Erreur lors de la sauvegarde ML: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "invoice_ml_data" violates not-null constraint
+DETAIL:  Failing row contains (null, null, / |
+| SITSE Reçu le:
+V4 N Votre numéro de client : 1 086 778 P..., {"extracted_data": {"metadata": {"filename": "processed_invoice"..., 0.60, 0.000, 0.25, 0.25, null, 2025-08-19 16:28:31.062387).
+
+[SQL: 
+                INSERT INTO invoice_ml_data (raw_text, extracted_data, confidence_score, 
+                                           processing_time, validation_score, data_quality_score)
+                VALUES (%(raw_text)s, %(extracted_data)s, %(confidence_score)s, %(processing_time)s, 
+                        %(validation_score)s, %(data_quality_score)s)
+            ]
+[parameters: {'raw_text': "/ |\n| SITSE Reçu le:\nV4 N Votre numéro de client : 1 086 778 Page 1/4\nq N° de facture : 110 009 850 987\nROMANDE 13 FEV, 05 N° pt mesure: CH101110 ... (1480 characters truncated) ... \nChemin Ballessert 5 1 En tr arr Énengesl à ï\n1297 Founex ' (nr san bn]\nMonnale Montant Monnaie Montant\nCHF 1858.75 ! CHF 1858.75\nPoint de dépôt", 'extracted_data': '{"extracted_data": {"metadata": {"filename": "processed_invoice", "processing_date": "2025-08-19 16:28:31.032605", "confidence_score": 0.6, "processi ... (1486 characters truncated) ...  false, "data_quality_score": 0.25}}, "confidence_score": 0.6, "processing_time": 0.0, "validation_score": 0.25, "filename": "20250304163636929.pdf"}', 'confidence_score': 0.6, 'processing_time': 0.0, 'validation_score': 0.25, 'data_quality_score': 0.25}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:28:31 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:61 - Extraction ML améliorée terminée
+2025-08-19 16:28:31 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:31 - Création du DTO Invoice à partir des données extraites avec BDD
+2025-08-19 16:28:31 | INFO     | src.extraction.swiss_invoice_extractor:extract_invoice_data_with_db:64 - Extraction des données de facture avec base de données
+2025-08-19 16:28:31 | INFO     | src.extraction.swiss_invoice_extractor:_extract_invoice_number:103 - Numéro de facture trouvé: 110009850987
+2025-08-19 16:28:31 | INFO     | src.extraction.swiss_invoice_extractor:_extract_date:122 - Date de facture trouvée: 2025-02-17
+2025-08-19 16:28:31 | ERROR    | src.extraction.swiss_invoice_extractor:_extract_company_from_db:168 - Erreur lors de la recherche de société: 'str' object is not callable
+2025-08-19 16:28:31 | ERROR    | src.extraction.swiss_invoice_extractor:_extract_supplier_from_db:207 - Erreur lors de la recherche de fournisseur: 'str' object is not callable
+2025-08-19 16:28:31 | INFO     | src.extraction.swiss_invoice_extractor:_extract_currency:216 - Devise trouvée: CHF
+2025-08-19 16:28:31 | INFO     | src.extraction.swiss_invoice_extractor:_extract_amounts:243 - total_ttc trouvé: 1858.75
+2025-08-19 16:28:31 | INFO     | src.extraction.swiss_invoice_extractor:extract_invoice_data_with_db:82 - Données extraites: {'invoice_number': '110009850987', 'invoice_date': datetime.date(2025, 2, 17), 'company_erp_code': None, 'supplier_name': None, 'currency_code': 'CHF', 'amounts': {'total_ttc': Decimal('1858.75'), 'total_ht': None, 'tva': None}}
+2025-08-19 16:28:31 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:78 - DTO Invoice créé avec succès - ID: d6037376-1475-4242-b3a4-0ece1fd0853e
+2025-08-19 16:28:31 | INFO     | src.api.routes:process_invoice:110 - Traitement terminé en 3.68s
+2025-08-19 16:28:31 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 3.68s
+2025-08-19 16:29:01 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:29:02 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:29:02 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:29:02 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:29:02 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:29:02 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:29:13 | INFO     | src.main:log_requests:124 - Requête: POST http://localhost:8000/api/v1/process-invoice
+2025-08-19 16:29:13 | INFO     | src.api.routes:process_invoice:59 - Début du traitement de la facture: 20250304163636929.pdf
+2025-08-19 16:29:13 | INFO     | src.preprocessing.enhanced_image_processor:process_file:147 - Traitement du fichier: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpwo_xkm12.pdf
+2025-08-19 16:29:13 | INFO     | src.processors.pdf_processor:process:50 - Conversion PDF en cours: /Users/rado.herilalao.sopra-steria/Library/CloudStorage/OneDrive-PMU/Documents/OCR/ocr_factures/data/temp/tmpwo_xkm12.pdf
+2025-08-19 16:29:13 | INFO     | src.processors.pdf_processor:process:66 - PDF converti avec succès - Taille: (3508, 2480, 3)
+2025-08-19 16:29:13 | WARNING  | src.preprocessing.enhanced_image_processor:correct_skew:48 - Impossible de corriger l'inclinaison: not enough values to unpack (expected 2, got 1)
+2025-08-19 16:29:14 | INFO     | src.preprocessing.enhanced_image_processor:process_file:158 - Préprocessing terminé avec succès
+2025-08-19 16:29:14 | INFO     | src.ocr.ocr_engine:extract_text:76 - Extraction OCR en cours (langue: fra)
+2025-08-19 16:29:16 | INFO     | src.ocr.ocr_engine:extract_text:117 - OCR terminé - Confiance: 0.73
+2025-08-19 16:29:17 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:44 - Début de l'extraction ML améliorée
+2025-08-19 16:29:17 | INFO     | src.extraction.data_extractor:extract_invoice_data:97 - Début de l'extraction de données
+2025-08-19 16:29:17 | INFO     | src.extraction.data_extractor:extract_invoice_data:134 - Extraction de données terminée
+2025-08-19 16:29:17 | ERROR    | src.extraction.ml_enhanced_extractor:_enhance_amounts_with_history:204 - Erreur lors de l'amélioration des montants: 'str' object is not callable
+2025-08-19 16:29:17 | ERROR    | src.extraction.ml_enhanced_extractor:_save_ml_training_data:427 - Erreur lors de la sauvegarde ML: (psycopg2.errors.NotNullViolation) null value in column "id" of relation "invoice_ml_data" violates not-null constraint
+DETAIL:  Failing row contains (null, null, / |
+| SITSE Reçu le:
+V4 N Votre numéro de client : 1 086 778 P..., {"extracted_data": {"metadata": {"filename": "processed_invoice"..., 0.60, 0.000, 0.25, 0.25, null, 2025-08-19 16:29:17.062035).
+
+[SQL: 
+                INSERT INTO invoice_ml_data (raw_text, extracted_data, confidence_score, 
+                                           processing_time, validation_score, data_quality_score)
+                VALUES (%(raw_text)s, %(extracted_data)s, %(confidence_score)s, %(processing_time)s, 
+                        %(validation_score)s, %(data_quality_score)s)
+            ]
+[parameters: {'raw_text': "/ |\n| SITSE Reçu le:\nV4 N Votre numéro de client : 1 086 778 Page 1/4\nq N° de facture : 110 009 850 987\nROMANDE 13 FEV, 05 N° pt mesure: CH101110 ... (1480 characters truncated) ... \nChemin Ballessert 5 1 En tr arr Énengesl à ï\n1297 Founex ' (nr san bn]\nMonnale Montant Monnaie Montant\nCHF 1858.75 ! CHF 1858.75\nPoint de dépôt", 'extracted_data': '{"extracted_data": {"metadata": {"filename": "processed_invoice", "processing_date": "2025-08-19 16:29:17.009436", "confidence_score": 0.6, "processi ... (1486 characters truncated) ...  false, "data_quality_score": 0.25}}, "confidence_score": 0.6, "processing_time": 0.0, "validation_score": 0.25, "filename": "20250304163636929.pdf"}', 'confidence_score': 0.6, 'processing_time': 0.0, 'validation_score': 0.25, 'data_quality_score': 0.25}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-19 16:29:17 | INFO     | src.extraction.ml_enhanced_extractor:extract_invoice_data_with_ml:61 - Extraction ML améliorée terminée
+2025-08-19 16:29:17 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:31 - Création du DTO Invoice à partir des données extraites avec BDD
+2025-08-19 16:29:17 | INFO     | src.extraction.swiss_invoice_extractor:extract_invoice_data_with_db:64 - Extraction des données de facture avec base de données
+2025-08-19 16:29:17 | INFO     | src.extraction.swiss_invoice_extractor:_extract_invoice_number:103 - Numéro de facture trouvé: 110009850987
+2025-08-19 16:29:17 | INFO     | src.extraction.swiss_invoice_extractor:_extract_date:122 - Date de facture trouvée: 2025-02-17
+2025-08-19 16:29:17 | ERROR    | src.extraction.swiss_invoice_extractor:_extract_company_from_db:169 - Erreur lors de la recherche de société: (psycopg2.errors.UndefinedColumn) column "company_erp_code" does not exist
+LINE 2:                 SELECT company_erp_code, company_name 
+                               ^
+
+[SQL: 
+                SELECT company_erp_code, company_name 
+                FROM company 
+                WHERE company_erp_code IS NOT NULL
+            ]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-08-19 16:29:17 | ERROR    | src.extraction.swiss_invoice_extractor:_extract_supplier_from_db:209 - Erreur lors de la recherche de fournisseur: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: 
+                SELECT DISTINCT supplier_name 
+                FROM supplier 
+                WHERE supplier_name IS NOT NULL 
+                AND LENGTH(supplier_name) > 3
+            ]
+(Background on this error at: https://sqlalche.me/e/20/2j85)
+2025-08-19 16:29:17 | INFO     | src.extraction.swiss_invoice_extractor:_extract_currency:218 - Devise trouvée: CHF
+2025-08-19 16:29:17 | INFO     | src.extraction.swiss_invoice_extractor:_extract_amounts:245 - total_ttc trouvé: 1858.75
+2025-08-19 16:29:17 | INFO     | src.extraction.swiss_invoice_extractor:extract_invoice_data_with_db:82 - Données extraites: {'invoice_number': '110009850987', 'invoice_date': datetime.date(2025, 2, 17), 'company_erp_code': None, 'supplier_name': None, 'currency_code': 'CHF', 'amounts': {'total_ttc': Decimal('1858.75'), 'total_ht': None, 'tva': None}}
+2025-08-19 16:29:17 | INFO     | src.services.invoice_service:create_invoice_from_extracted_data:78 - DTO Invoice créé avec succès - ID: dd1b49ae-49ef-4f0e-be5d-3e5b5b7be5bd
+2025-08-19 16:29:17 | INFO     | src.api.routes:process_invoice:110 - Traitement terminé en 3.79s
+2025-08-19 16:29:17 | INFO     | src.main:log_requests:131 - Réponse: 200 - Temps de traitement: 3.79s
+2025-08-19 16:35:19 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:35:21 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:35:21 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:35:21 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:35:21 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:35:21 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:35:22 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:35:23 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:35:23 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:35:23 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:35:23 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:35:23 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:35:42 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:35:44 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:35:44 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:35:44 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:35:44 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:35:44 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:38:17 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:38:19 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:38:19 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:38:19 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:38:19 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:38:19 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:38:19 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:38:20 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:38:20 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:38:20 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:38:20 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:38:20 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:38:56 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:38:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:38:57 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:38:57 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:38:57 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:38:57 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:39:42 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:39:43 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:39:43 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:39:43 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:39:43 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:39:43 | INFO     | src.main:lifespan:26 - Mode debug: False
+2025-08-19 16:39:58 | INFO     | src.main:lifespan:31 - Arrêt de l'application OCR Factures
+2025-08-19 16:40:00 | INFO     | src.ocr.ocr_engine:_validate_tesseract:51 - Chemin Tesseract configuré: /opt/homebrew/bin/tesseract
+2025-08-19 16:40:00 | INFO     | src.ocr.ocr_engine:_validate_tesseract:58 - Tesseract trouvé: tesseract 5.5.1
+2025-08-19 16:40:00 | INFO     | src.main:lifespan:24 - Démarrage de l'application OCR Factures
+2025-08-19 16:40:00 | INFO     | src.main:lifespan:25 - Version: 1.0.0
+2025-08-19 16:40:00 | INFO     | src.main:lifespan:26 - Mode debug: False

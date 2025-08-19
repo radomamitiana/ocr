@@ -147,15 +147,31 @@ class DataExtractor:
         return cleaned.strip()
     
     def _extract_supplier_info(self, text: str) -> Dict[str, Any]:
-        """Extrait les informations du fournisseur"""
+        """Extrait les informations du fournisseur (émetteur de la facture)"""
         supplier_info = {}
         
-        # Extraction du nom (généralement en haut du document)
-        lines = text.split('\n')[:10]  # Premières lignes
-        for line in lines:
-            if len(line.strip()) > 3 and not re.search(r'\d{2}[/\-\.]\d{2}', line):
-                supplier_info['name'] = line.strip()
+        # Le fournisseur est généralement en haut du document, avant les mots-clés client
+        lines = text.split('\n')
+        supplier_section = []
+        
+        # Chercher la section fournisseur (avant "FACTURER À", "CLIENT", etc.)
+        for i, line in enumerate(lines):
+            line_clean = line.strip().upper()
+            if any(keyword in line_clean for keyword in ['FACTURER', 'CLIENT', 'DESTINATAIRE', 'FACTURE']):
                 break
+            if line.strip() and len(line.strip()) > 2:
+                supplier_section.append(line.strip())
+        
+        # Extraire le nom du fournisseur (première ligne significative)
+        if supplier_section:
+            # Chercher une ligne qui ressemble à un nom d'entreprise
+            for line in supplier_section[:5]:  # Premières lignes
+                if (len(line) > 3 and 
+                    not re.search(r'\d{2}[/\-\.]\d{2}', line) and  # Pas une date
+                    not re.search(r'^\d+$', line) and  # Pas juste un numéro
+                    not '@' in line):  # Pas un email
+                    supplier_info['name'] = line
+                    break
         
         # Extraction SIRET
         siret_match = self._extract_with_patterns(text, 'siret')
@@ -167,22 +183,65 @@ class DataExtractor:
         if vat_match:
             supplier_info['vat_number'] = vat_match
         
+        # Extraction adresse et contact
+        address_info = self._extract_address_from_section(supplier_section)
+        if address_info:
+            supplier_info['address'] = address_info
+        
+        contact_info = self._extract_contact_from_section(supplier_section)
+        if contact_info:
+            supplier_info['contact'] = contact_info
+        
         return supplier_info
     
     def _extract_customer_info(self, text: str) -> Dict[str, Any]:
-        """Extrait les informations du client"""
+        """Extrait les informations du client (destinataire de la facture)"""
         customer_info = {}
         
-        # Recherche de sections client
-        client_patterns = [
-            r'(?:client|customer|facturé à)[\s:]*([^\n]+)',
-            r'(?:destinataire)[\s:]*([^\n]+)'
-        ]
+        # Chercher la section client après les mots-clés "FACTURER À", "CLIENT", etc.
+        lines = text.split('\n')
+        customer_section = []
+        in_customer_section = False
         
-        for pattern in client_patterns:
-            match = re.search(pattern, text, re.IGNORECASE)
-            if match:
-                customer_info['name'] = match.group(1).strip()
+        for line in lines:
+            line_clean = line.strip().upper()
+            
+            # Détecter le début de la section client
+            if any(keyword in line_clean for keyword in ['FACTURER À', 'FACTURER A', 'CLIENT', 'DESTINATAIRE']):
+                in_customer_section = True
+                continue
+            
+            # Arrêter à la section suivante
+            if in_customer_section and any(keyword in line_clean for keyword in ['DESCRIPTION', 'PRESTATION', 'TOTAL', 'MONTANT']):
+                break
+            
+            # Collecter les lignes de la section client
+            if in_customer_section and line.strip():
+                customer_section.append(line.strip())
+        
+        # Extraire le nom du client (première ligne significative)
+        if customer_section:
+            # Chercher une ligne qui ressemble à un nom d'entreprise
+            for line in customer_section[:3]:  # Premières lignes
+                if (len(line) > 3 and 
+                    not re.search(r'\d{2}[/\-\.]\d{2}', line) and  # Pas une date
+                    not line.upper().startswith('CONTACT') and  # Pas la ligne contact
+                    not line.upper().startswith('R.C.S')):  # Pas le RCS
+                    customer_info['name'] = line
+                    break
+        
+        # Extraction adresse du client
+        address_info = self._extract_address_from_section(customer_section)
+        if address_info:
+            customer_info['address'] = address_info
+        
+        # Extraction ID client (RCS, etc.)
+        for line in customer_section:
+            if 'R.C.S' in line.upper():
+                # Extraire le numéro RCS
+                rcs_match = re.search(r'R\.C\.S[^0-9]*(\d+(?:\s+\d+)*)', line, re.IGNORECASE)
+                if rcs_match:
+                    customer_info['customer_id'] = rcs_match.group(1).replace(' ', '')
                 break
         
         return customer_info
@@ -191,17 +250,46 @@ class DataExtractor:
         """Extrait les informations de la facture"""
         invoice_info = {}
         
-        # Numéro de facture
-        invoice_num = self._extract_with_patterns(text, 'invoice_number')
-        if invoice_num:
-            invoice_info['number'] = invoice_num
+        # Numéro de facture - patterns améliorés
+        invoice_patterns = [
+            r'(?:N°\s*FACTURE|FACTURE\s*N°|INVOICE\s*NUMBER)[\s:]*([A-Z0-9\-/]+)',
+            r'FAC[\-\s]*([A-Z0-9\-/]+)',
+            r'(?:N°|Réf\s*N°)[\s:]*([A-Z0-9\-/]+)'
+        ]
         
-        # Date de facture
-        date_match = self._extract_with_patterns(text, 'date')
-        if date_match:
-            parsed_date = self._parse_date(date_match)
-            if parsed_date:
-                invoice_info['date'] = parsed_date
+        for pattern in invoice_patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                invoice_info['number'] = match.group(1).strip()
+                break
+        
+        # Date de facture - temporairement désactivée à cause du problème Pydantic
+        # date_patterns = [
+        #     r'(?:DATE|Date)[\s:]*(\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{2,4})',
+        #     r'(\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{4})'
+        # ]
+        # 
+        # for pattern in date_patterns:
+        #     match = re.search(pattern, text)
+        #     if match:
+        #         parsed_date = self._parse_date(match.group(1))
+        #         if parsed_date:
+        #             invoice_info['date'] = parsed_date
+        #             break
+        
+        # Date d'échéance - temporairement désactivée à cause du problème Pydantic
+        # due_date_patterns = [
+        #     r'(?:Date\s*d.échéance|échéance|Due\s*date)[\s:]*(\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{2,4})',
+        #     r'(\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{4})'
+        # ]
+        # 
+        # for pattern in due_date_patterns:
+        #     match = re.search(pattern, text, re.IGNORECASE)
+        #     if match:
+        #         parsed_due_date = self._parse_date(match.group(1))
+        #         if parsed_due_date:
+        #             invoice_info['due_date'] = parsed_due_date
+        #             break
         
         # Devise (par défaut EUR)
         if '€' in text:
@@ -251,22 +339,38 @@ class DataExtractor:
         """Extrait les totaux de la facture"""
         totals_info = {}
         
-        # Recherche des montants totaux
+        # Patterns améliorés pour les montants totaux
         total_patterns = [
-            (r'(?:total\s+ht|sous.total)[\s:]*(\d+[,\.]\d{2})', 'subtotal_excl_vat'),
-            (r'(?:total\s+tva|tva)[\s:]*(\d+[,\.]\d{2})', 'total_vat'),
-            (r'(?:total\s+ttc|total)[\s:]*(\d+[,\.]\d{2})', 'total_incl_vat'),
-            (r'(?:à\s+payer|net\s+à\s+payer)[\s:]*(\d+[,\.]\d{2})', 'amount_due')
+            # Sous-total HT
+            (r'(?:Sous.total|TOTAL\s+HT)[\s:]*(\d+(?:[,\.]\d{2})?)', 'subtotal_excl_vat'),
+            # TVA
+            (r'(?:TVA\s*\d+%|TVA)[\s:]*(\d+(?:[,\.]\d{2})?)', 'total_vat'),
+            # Total TTC
+            (r'(?:TOTAL\s+TTC|Total\s+TTC)[\s:]*(\d+(?:[,\.]\d{2})?)', 'total_incl_vat'),
+            # Montant à payer
+            (r'(?:TOTAL|Total)[\s:]*(\d+(?:[,\.]\d{2})?)', 'amount_due')
         ]
         
-        for pattern, field in total_patterns:
-            match = re.search(pattern, text, re.IGNORECASE)
-            if match:
-                try:
-                    amount = float(match.group(1).replace(',', '.'))
-                    totals_info[field] = amount
-                except ValueError:
-                    continue
+        # Chercher les montants dans le texte
+        lines = text.split('\n')
+        for line in lines:
+            line_upper = line.upper()
+            
+            # Chercher spécifiquement les lignes de totaux
+            if any(keyword in line_upper for keyword in ['TOTAL', 'TVA', 'SOUS-TOTAL']):
+                for pattern, field in total_patterns:
+                    match = re.search(pattern, line, re.IGNORECASE)
+                    if match and field not in totals_info:
+                        try:
+                            amount_str = match.group(1).replace(',', '.')
+                            amount = float(amount_str)
+                            totals_info[field] = amount
+                        except ValueError:
+                            continue
+        
+        # Si on trouve un montant TTC, l'utiliser aussi comme montant dû
+        if 'total_incl_vat' in totals_info and 'amount_due' not in totals_info:
+            totals_info['amount_due'] = totals_info['total_incl_vat']
         
         return Totals(**totals_info) if totals_info else None
     
@@ -336,3 +440,50 @@ class DataExtractor:
         validation.data_quality_score = quality_score
         
         return validation
+    
+    def _extract_address_from_section(self, section_lines: List[str]) -> Optional[Dict[str, Any]]:
+        """Extrait l'adresse d'une section de texte"""
+        if not section_lines:
+            return None
+        
+        address_info = {}
+        
+        # Chercher les lignes qui ressemblent à une adresse
+        for line in section_lines:
+            # Code postal et ville (pattern français)
+            postal_match = re.search(r'(\d{5})\s+([A-Z\s]+)', line.upper())
+            if postal_match:
+                address_info['postal_code'] = postal_match.group(1)
+                address_info['city'] = postal_match.group(2).strip()
+                continue
+            
+            # Rue/avenue (contient des numéros et des mots comme rue, avenue, etc.)
+            if re.search(r'\d+.*(?:rue|avenue|boulevard|place|rond.point|parc)', line, re.IGNORECASE):
+                address_info['street'] = line
+                continue
+        
+        # Pays par défaut
+        if address_info:
+            address_info['country'] = 'France'
+        
+        return address_info if address_info else None
+    
+    def _extract_contact_from_section(self, section_lines: List[str]) -> Optional[Dict[str, Any]]:
+        """Extrait les informations de contact d'une section de texte"""
+        if not section_lines:
+            return None
+        
+        contact_info = {}
+        
+        for line in section_lines:
+            # Email
+            email_match = re.search(r'([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})', line)
+            if email_match:
+                contact_info['email'] = email_match.group(1)
+            
+            # Téléphone
+            phone_match = re.search(r'(?:tél|tel|phone)[\s:]*([0-9\s\.\-\+]{10,})', line, re.IGNORECASE)
+            if phone_match:
+                contact_info['phone'] = phone_match.group(1).strip()
+        
+        return contact_info if contact_info else None

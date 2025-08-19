@@ -1,0 +1,18 @@
+{
+  "invoice": {
+    "columns": [],
+    "constraints": []
+  },
+  "invoice_goal": {
+    "columns": [],
+    "constraints": []
+  },
+  "company": {
+    "columns": [],
+    "constraints": []
+  },
+  "customer": {
+    "columns": [],
+    "constraints": []
+  }
+}

@@ -33,6 +33,11 @@ pytest-asyncio==0.21.1
 httpx==0.25.2
 pytest-cov==4.1.0
 
+# Base de données
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9
+alembic==1.13.1
+
 # Utilitaires
 python-dotenv==1.0.0
 aiofiles==23.2.1

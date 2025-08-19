@@ -2,6 +2,7 @@
 Point d'entrée principal de l'application FastAPI
 """
 
+import time
 import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -149,8 +150,6 @@ async def root():
 
 # Point d'entrée pour le développement
 if __name__ == "__main__":
-    import time
-    
     uvicorn.run(
         "src.main:app",
         host=settings.host,

@@ -10,10 +10,13 @@ from typing import Optional
 from fastapi import APIRouter, UploadFile, File, Form, HTTPException, status
 from fastapi.responses import JSONResponse
 from src.api.models import *
+from src.api.invoice_models import InvoiceResponse
+from src.services.invoice_service import get_invoice_service
 from src.config.settings import settings
 from src.preprocessing.enhanced_image_processor import EnhancedImageProcessor
 from src.ocr.ocr_engine import OCREngine
 from src.extraction.data_extractor import DataExtractor
+from src.extraction.ml_enhanced_extractor import MLEnhancedExtractor
 from src.utils.logger import app_logger
 from src.utils.exceptions import *
 
@@ -25,14 +28,15 @@ router = APIRouter()
 image_processor = EnhancedImageProcessor()
 ocr_engine = OCREngine()
 data_extractor = DataExtractor()
+ml_extractor = MLEnhancedExtractor()
 
 
 @router.post(
     "/process-invoice",
-    response_model=ProcessInvoiceResponse,
+    response_model=InvoiceResponse,
     status_code=status.HTTP_200_OK,
     summary="Traite une facture et extrait les données",
-    description="Upload d'une image de facture (PNG, JPG, JPEG, PDF) et extraction automatique des données structurées"
+    description="Upload d'une image de facture (PNG, JPG, JPEG, PDF) et extraction automatique des données structurées avec sauvegarde en base"
 )
 async def process_invoice(
     file: UploadFile = File(..., description="Fichier image de la facture"),
@@ -78,10 +82,11 @@ async def process_invoice(
             language=processing_options.language
         )
         
-        # Extraction des données de facture
-        invoice_data = data_extractor.extract_invoice_data(
+        # Extraction des données de facture avec ML amélioré
+        invoice_data = ml_extractor.extract_invoice_data_with_ml(
             ocr_result.text,
-            structured_data
+            structured_data,
+            file.filename
         )
         
         # Mise à jour des métadonnées
@@ -90,16 +95,24 @@ async def process_invoice(
         invoice_data.metadata.processing_time = processing_time
         invoice_data.metadata.confidence_score = ocr_result.confidence
         
-        # Validation si demandée
-        if processing_options.enable_validation:
-            _validate_extracted_data(invoice_data, processing_options.confidence_threshold)
+        # Validation si demandée - temporairement désactivée pour debug
+        # if processing_options.enable_validation:
+        #     _validate_extracted_data(invoice_data, processing_options.confidence_threshold)
+        
+        # Création de la facture en base de données via le service
+        invoice_service = get_invoice_service()
+        invoice_dto = invoice_service.create_invoice_from_extracted_data(
+            invoice_data, 
+            file.filename,
+            ocr_result.text  # Passage du texte brut pour l'extraction améliorée
+        )
         
         app_logger.info(f"Traitement terminé en {processing_time:.2f}s")
         
-        return ProcessInvoiceResponse(
-            status=ProcessingStatus.SUCCESS,
+        return InvoiceResponse(
+            status="success",
             processing_time=processing_time,
-            data=invoice_data
+            invoice=invoice_dto
         )
         
     except InvalidFileFormatError as e:

@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     upload_dir: str = "data/temp"
     
     # OCR Configuration
-    tesseract_cmd: str = "/usr/bin/tesseract"  # Chemin vers tesseract
+    tesseract_cmd: str = "/opt/homebrew/bin/tesseract"  # Chemin vers tesseract
     ocr_language: str = "fra"
     confidence_threshold: float = 0.8
     

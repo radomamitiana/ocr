@@ -11,6 +11,9 @@ from src.config.settings import settings
 from src.utils.logger import app_logger
 from src.utils.exceptions import OCRProcessingError, ConfigurationError
 
+# Configuration globale de pytesseract dès l'import
+pytesseract.pytesseract.tesseract_cmd = settings.tesseract_cmd
+
 
 @dataclass
 class OCRResult:
@@ -31,7 +34,10 @@ class OCREngine:
     def _configure_tesseract(self):
         """Configure Tesseract"""
         try:
-            # Configuration du chemin vers tesseract si spécifié
+            # Configuration du chemin vers tesseract - forcer le chemin Homebrew
+            pytesseract.pytesseract.tesseract_cmd = "/opt/homebrew/bin/tesseract"
+            
+            # Configuration du chemin vers tesseract si spécifié dans les settings
             if settings.tesseract_cmd:
                 pytesseract.pytesseract.tesseract_cmd = settings.tesseract_cmd
                 
@@ -41,10 +47,18 @@ class OCREngine:
     def _validate_tesseract(self):
         """Valide que Tesseract est correctement installé"""
         try:
-            version = pytesseract.get_tesseract_version()
-            app_logger.info(f"Tesseract version: {version}")
+            # Debug: afficher le chemin utilisé
+            app_logger.info(f"Chemin Tesseract configuré: {pytesseract.pytesseract.tesseract_cmd}")
+            
+            # Tester directement avec le chemin configuré
+            import subprocess
+            result = subprocess.run([pytesseract.pytesseract.tesseract_cmd, '--version'], 
+                                  capture_output=True, text=True, check=True)
+            version_info = result.stdout.split('\n')[0]
+            app_logger.info(f"Tesseract trouvé: {version_info}")
             
         except Exception as e:
+            app_logger.error(f"Chemin tesseract utilisé: {pytesseract.pytesseract.tesseract_cmd}")
             raise ConfigurationError(f"Tesseract non trouvé ou mal configuré: {str(e)}")
     
     def extract_text(self, image: np.ndarray, language: str = "fra") -> OCRResult:
@@ -109,10 +123,10 @@ class OCREngine:
     
     def _get_ocr_config(self) -> str:
         """Retourne la configuration OCR optimisée pour les factures"""
+        # Configuration simplifiée sans whitelist pour éviter les problèmes de guillemets
         return (
             "--oem 3 "  # OCR Engine Mode: Default
-            "--psm 6 "  # Page Segmentation Mode: Uniform block of text
-            "-c tessedit_char_whitelist=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ.,;:!?()[]{}\"'-+*/=€$%@#&_|\\/<> "
+            "--psm 6"   # Page Segmentation Mode: Uniform block of text
         )
     
     def extract_structured_data(self, image: np.ndarray, language: str = "fra") -> Dict:
