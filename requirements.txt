@@ -1,0 +1,38 @@
+# API REST
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+slowapi==0.1.9
+pydantic-settings==2.1.0
+
+# OCR et Traitement d'Images
+pytesseract==0.3.10
+opencv-python==4.8.1.78
+Pillow==10.1.0
+pdf2image==1.16.3
+
+# LLM et IA
+transformers==4.35.2
+torch==2.1.1
+langchain==0.0.335
+sentence-transformers==2.2.2
+
+# Traitement de Données
+pandas==2.1.3
+numpy==1.25.2
+pydantic==2.5.0
+jsonschema==4.20.0
+
+# Monitoring et Logs
+loguru==0.7.2
+structlog==23.2.0
+
+# Tests
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+pytest-cov==4.1.0
+
+# Utilitaires
+python-dotenv==1.0.0
+aiofiles==23.2.1
